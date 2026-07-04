@@ -10,6 +10,7 @@ index.html        the whole site (English by default)
 css/style.css     styles
 js/main.js        translations (EN/BHS), geo-IP language detection, interactions
 assets/           logo.svg, logo-white.svg, favicon.svg
+assets/clients/   client brand logos (shown in the marquee under the hero)
 docs/             design spec
 ```
 
@@ -30,6 +31,12 @@ docs/             design spec
    in the `CREATIVES` array in `js/main.js`. Tiles without `src` show placeholders.
 5. **Ads Manager screenshots** — replace the two dashed placeholder boxes in the
    Results section (`.shot`) with `<img>` tags once you export the screenshots.
+6. **FAQ numbers** — the answers state "€5k+/month minimum budget", "month to month,
+   no contracts" and "results in 60–90 days". Adjust in `js/main.js` (faq.* keys)
+   if that's not how you actually work.
+7. **Client logos** — the marquee shows all 13 logos from `assets/clients/`;
+   add or remove `<img>` tags in `index.html` (remember: each logo appears twice,
+   once in the visible track and once in the aria-hidden duplicate for the loop).
 
 ## Notes
 
