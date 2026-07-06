@@ -170,6 +170,35 @@
       "ugc.f.btn": "Send application",
       "ugc.f.note": "Submitting opens your email app with the application pre-filled. We reply within a few days if there’s a fit.",
 
+      "sk.skip": "Skip to content",
+
+      "cc.text": "We’d like to use cookies (analytics and Meta Pixel) to understand what works and measure our ads. Your call.",
+      "cc.accept": "Accept",
+      "cc.decline": "Decline",
+      "cc.more": "Privacy policy",
+
+      "nf.title": "Page not <em>found</em>.",
+      "nf.text": "This page doesn’t exist — but your profit potential does.",
+      "nf.btn": "Back to homepage",
+
+      "pv.kicker": "Legal",
+      "pv.title": "Privacy <em>policy</em>.",
+      "pv.updated": "Last updated: July 6, 2026",
+      "pv.1t": "Who we are",
+      "pv.1d": "AdsMerce is a performance marketing agency for e-commerce brands. For anything related to your data, write to hello@adsmerce.com.",
+      "pv.2t": "What we collect",
+      "pv.2d": "Emails you send us and newsletter sign-ups (your email address). With your consent, anonymous analytics data (Google Analytics) and advertising data via Meta Pixel. To auto-detect your language, your IP country is looked up once via ipapi.co — we don’t store your IP.",
+      "pv.3t": "Why we collect it",
+      "pv.3d": "To reply to you, send the newsletter you asked for, understand how the site is used and measure our own advertising. We never sell or share your data.",
+      "pv.4t": "Cookies & consent",
+      "pv.4d": "Analytics and Meta Pixel run only after you click Accept in the cookie banner. You can change your mind anytime:",
+      "pv.4btn": "Reset my cookie choice",
+      "pv.5t": "Your rights",
+      "pv.5d": "Under GDPR you can request access, correction or deletion of your data at any time — one email to hello@adsmerce.com is enough.",
+      "pv.6t": "Third-party services",
+      "pv.6d": "Google Analytics (traffic measurement), Meta Pixel (ad measurement and retargeting), ipapi.co (language auto-detection), Google Fonts (typography) and our newsletter provider once configured.",
+
+      "ft.privacy": "Privacy policy",
       "ft.blurb": "Performance marketing agency specialized in e-commerce growth through Meta & Google Ads, creative, CRO and AI automation.",
       "ft.services": "Services",
       "ft.contact": "Contact",
@@ -342,6 +371,35 @@
       "ugc.f.btn": "Pošalji prijavu",
       "ugc.f.note": "Slanjem se otvara tvoj email sa popunjenom prijavom. Odgovaramo u roku od par dana ako postoji poklapanje.",
 
+      "sk.skip": "Preskoči na sadržaj",
+
+      "cc.text": "Željeli bismo koristiti kolačiće (analitika i Meta Pixel) da razumijemo šta radi i mjerimo vlastite oglase. Ti odlučuješ.",
+      "cc.accept": "Prihvati",
+      "cc.decline": "Odbij",
+      "cc.more": "Politika privatnosti",
+
+      "nf.title": "Stranica nije <em>pronađena</em>.",
+      "nf.text": "Ova stranica ne postoji — ali tvoj potencijal za profit postoji.",
+      "nf.btn": "Nazad na početnu",
+
+      "pv.kicker": "Pravno",
+      "pv.title": "Politika <em>privatnosti</em>.",
+      "pv.updated": "Zadnja izmjena: 6. juli 2026.",
+      "pv.1t": "Ko smo mi",
+      "pv.1d": "AdsMerce je performance marketing agencija za e-commerce brendove. Za sve u vezi tvojih podataka piši na hello@adsmerce.com.",
+      "pv.2t": "Šta prikupljamo",
+      "pv.2d": "Emailove koje nam pošalješ i prijave na newsletter (tvoja email adresa). Uz tvoj pristanak, anonimne analitičke podatke (Google Analytics) i podatke za oglašavanje putem Meta Pixela. Za automatsko prepoznavanje jezika, država tvoje IP adrese se jednom provjerava preko ipapi.co — tvoju IP adresu ne čuvamo.",
+      "pv.3t": "Zašto prikupljamo",
+      "pv.3d": "Da ti odgovorimo, pošaljemo newsletter koji si tražio/la, razumijemo kako se sajt koristi i mjerimo vlastito oglašavanje. Tvoje podatke nikad ne prodajemo niti dijelimo.",
+      "pv.4t": "Kolačići i pristanak",
+      "pv.4d": "Analitika i Meta Pixel se pokreću tek nakon što klikneš Prihvati u banneru za kolačiće. Odluku možeš promijeniti bilo kad:",
+      "pv.4btn": "Resetuj moj izbor kolačića",
+      "pv.5t": "Tvoja prava",
+      "pv.5d": "Po GDPR-u u svakom trenutku možeš zatražiti uvid, ispravku ili brisanje svojih podataka — dovoljan je jedan email na hello@adsmerce.com.",
+      "pv.6t": "Servisi trećih strana",
+      "pv.6d": "Google Analytics (mjerenje posjeta), Meta Pixel (mjerenje oglasa i retargeting), ipapi.co (automatsko prepoznavanje jezika), Google Fonts (tipografija) i newsletter servis kad bude podešen.",
+
+      "ft.privacy": "Politika privatnosti",
       "ft.blurb": "Performance marketing agencija specijalizovana za e-commerce rast kroz Meta i Google Ads, kreative, CRO i AI automatizaciju.",
       "ft.services": "Usluge",
       "ft.contact": "Kontakt",
@@ -531,6 +589,87 @@
     document.querySelectorAll(".reveal").forEach(function (el) { observer.observe(el); });
   } else {
     document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
+  }
+
+  /* --------------------------------------------------- analytics & pixel */
+  /* Paste your IDs here when ready. While both are empty, no tracking code
+     loads and no cookie banner is shown. Tracking only ever loads after the
+     visitor clicks Accept (GDPR consent). */
+  var GA4_ID = "";        /* e.g. "G-XXXXXXXXXX" */
+  var META_PIXEL_ID = ""; /* e.g. "123456789012345" */
+
+  var CONSENT_KEY = "adsmerce_consent";
+  /* Path prefix so the privacy link works from subfolders (blog/) too. */
+  var ROOT = (function () {
+    var s = document.querySelector('script[src$="main.js"]');
+    return s ? s.getAttribute("src").replace("js/main.js", "") : "";
+  })();
+
+  function loadTracking() {
+    if (window.__amTracked) return;
+    window.__amTracked = true;
+    if (GA4_ID) {
+      var g = document.createElement("script");
+      g.async = true;
+      g.src = "https://www.googletagmanager.com/gtag/js?id=" + GA4_ID;
+      document.head.appendChild(g);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag("js", new Date());
+      window.gtag("config", GA4_ID, { anonymize_ip: true });
+    }
+    if (META_PIXEL_ID) {
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return; n = f.fbq = function () {
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = "2.0";
+        n.queue = []; t = b.createElement(e); t.async = !0; t.src = v;
+        s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+      }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+      window.fbq("init", META_PIXEL_ID);
+      window.fbq("track", "PageView");
+    }
+  }
+
+  function buildConsentBanner() {
+    var b = document.createElement("div");
+    b.className = "consent";
+    b.setAttribute("role", "dialog");
+    b.setAttribute("aria-label", "Cookie consent");
+    b.innerHTML =
+      '<p data-i18n="cc.text">' + I18N[currentLang]["cc.text"] + "</p>" +
+      '<div class="consent-actions">' +
+      '<button type="button" class="btn btn-green btn-sm" id="ccAccept" data-i18n="cc.accept">' + I18N[currentLang]["cc.accept"] + "</button>" +
+      '<button type="button" class="btn btn-ghost btn-sm" id="ccDecline" data-i18n="cc.decline">' + I18N[currentLang]["cc.decline"] + "</button>" +
+      '<a href="' + ROOT + 'privacy.html" data-i18n="cc.more">' + I18N[currentLang]["cc.more"] + "</a>" +
+      "</div>";
+    document.body.appendChild(b);
+    document.getElementById("ccAccept").addEventListener("click", function () {
+      try { localStorage.setItem(CONSENT_KEY, "granted"); } catch (e) { }
+      b.remove();
+      loadTracking();
+    });
+    document.getElementById("ccDecline").addEventListener("click", function () {
+      try { localStorage.setItem(CONSENT_KEY, "denied"); } catch (e) { }
+      b.remove();
+    });
+  }
+
+  /* Called from privacy.html — lets visitors change their cookie choice. */
+  window.adsmerceResetConsent = function () {
+    try { localStorage.removeItem(CONSENT_KEY); } catch (e) { }
+    location.reload();
+  };
+
+  if (GA4_ID || META_PIXEL_ID) {
+    var consent = null;
+    try { consent = localStorage.getItem(CONSENT_KEY); } catch (e) { }
+    if (consent === "granted") {
+      loadTracking();
+    } else if (!consent) {
+      buildConsentBanner();
+    }
   }
 
   /* ----------------------------------------------------------------- init */

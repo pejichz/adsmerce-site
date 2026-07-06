@@ -55,6 +55,11 @@ docs/             design spec
    "fixed price" without naming one; add the price if you want it public. For each
    new post: copy an existing post file, update title/description/JSON-LD/date,
    add a card to `blog/index.html` and a URL entry to `sitemap.xml`.
+12. **Analytics & Meta Pixel** — paste your IDs into `GA4_ID` and `META_PIXEL_ID`
+   near the bottom of `js/main.js`. While both are empty nothing loads and no
+   cookie banner shows. Once either is set, the GDPR consent banner appears
+   automatically and tracking loads only after the visitor clicks Accept.
+   The privacy policy page (`privacy.html`) has a "reset cookie choice" button.
 
 ## Notes
 
