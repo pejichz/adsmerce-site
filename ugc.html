@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Become a UGC creator — AdsMerce</title>
+<meta name="description" content="Create UGC video ads for European e-commerce brands and get paid per video. No follower count required — we pay for content, not reach. Apply now.">
+<link rel="canonical" href="https://adsmerce.com/ugc.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Become a UGC creator — AdsMerce">
+<meta property="og:description" content="Create UGC video ads for e-commerce brands and get paid per video. No follower count required.">
+<meta property="og:url" content="https://adsmerce.com/ugc.html">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="AdsMerce home">
+      <img src="assets/logo.svg" alt="adsmerce." height="20">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="index.html#services" data-i18n="nav.services">Services</a>
+      <a href="index.html#work" data-i18n="nav.work">Work</a>
+      <a href="index.html#results" data-i18n="nav.results">Results</a>
+      <a href="blog/" data-i18n="nav.blog">Blog</a>
+      <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="bs" aria-pressed="false">BS</button>
+      </div>
+      <a href="#apply" class="btn btn-primary btn-sm" data-i18n="ugc.f.t">Apply</a>
+      <button type="button" class="nav-burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile" hidden>
+    <a href="index.html#services" data-i18n="nav.services">Services</a>
+    <a href="index.html#work" data-i18n="nav.work">Work</a>
+    <a href="index.html#results" data-i18n="nav.results">Results</a>
+    <a href="blog/" data-i18n="nav.blog">Blog</a>
+    <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+    <a href="#apply" class="btn btn-primary" data-i18n="ugc.f.t">Apply</a>
+  </div>
+</header>
+
+<main>
+  <section class="ugc-hero">
+    <div class="container">
+      <p class="eyebrow reveal" data-i18n="ugc.eyebrow">For creators</p>
+      <h1 class="reveal d1" style="font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;letter-spacing:-0.045em;line-height:1;margin-bottom:28px" data-i18n-html="ugc.title">Create UGC ads. <em>Get paid</em>.</h1>
+      <p class="lead reveal d2" data-i18n="ugc.lead">We produce ads for e-commerce brands across Europe and are always looking for creators — for videos in English, German, BHS and other languages. No follower count required: we pay for content, not reach.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container ugc-grid">
+      <div class="ugc-benefits reveal">
+        <h3 data-i18n="ugc.get.t">What you get</h3>
+        <ul class="ugc-list">
+          <li data-i18n="ugc.get.1">Paid per video — clear rates, agreed upfront</li>
+          <li data-i18n="ugc.get.2">Briefs and scripts from us — you focus on filming</li>
+          <li data-i18n="ugc.get.3">Products shipped to you, yours to keep</li>
+          <li data-i18n="ugc.get.4">Long-term collaboration if the work is good</li>
+        </ul>
+        <h3 data-i18n="ugc.look.t">What we look for</h3>
+        <ul class="ugc-list">
+          <li data-i18n="ugc.look.1">Solid smartphone video quality — good light and sound</li>
+          <li data-i18n="ugc.look.2">Natural, believable on-camera delivery</li>
+          <li data-i18n="ugc.look.3">Reliability — delivery within agreed deadlines</li>
+        </ul>
+      </div>
+      <div class="form-card reveal d1" id="apply">
+        <h3 data-i18n="ugc.f.t">Apply</h3>
+        <form id="ugcForm">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="ugc-name" data-i18n="ugc.f.name">Name</label>
+              <input id="ugc-name" name="name" type="text" required>
+            </div>
+            <div class="form-field">
+              <label for="ugc-email" data-i18n="ugc.f.email">Email</label>
+              <input id="ugc-email" name="email" type="email" required>
+            </div>
+            <div class="form-field">
+              <label for="ugc-social" data-i18n="ugc.f.social">Instagram / TikTok profile</label>
+              <input id="ugc-social" name="social" type="text">
+            </div>
+            <div class="form-field">
+              <label for="ugc-langs" data-i18n="ugc.f.lang">Languages you create in</label>
+              <input id="ugc-langs" name="langs" type="text">
+            </div>
+            <div class="form-field full">
+              <label for="ugc-about" data-i18n="ugc.f.about">Briefly about you + links to example videos (if any)</label>
+              <textarea id="ugc-about" name="about" rows="5"></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-green" style="margin-top:20px;width:100%" data-i18n="ugc.f.btn">Send application</button>
+          <p class="form-note" data-i18n="ugc.f.note">Submitting opens your email app with the application pre-filled. We reply within a few days if there’s a fit.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="padding-top:0">
+      <span>© 2026 AdsMerce. <span data-i18n="ft.rights">All rights reserved.</span></span>
+      <a href="index.html">adsmerce.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

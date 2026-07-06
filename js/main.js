@@ -32,7 +32,7 @@
       "svc.title": "Full-stack <em>e-commerce</em> growth.",
       "svc.sub": "We don’t just run ads. We take ownership of the whole funnel to maximize ROAS and profitability.",
       "svc.1t": "Performance marketing",
-      "svc.1d": "Meta Ads at expert level. We scale campaigns on data with one focus — profit, not vanity metrics.",
+      "svc.1d": "Meta Ads at expert level, with Google Ads where it compounds results. We scale campaigns on data with one focus — profit, not vanity metrics.",
       "svc.2t": "Creative production",
       "svc.2d": "We design and produce video and static ads that stop the scroll and convert.",
       "svc.3t": "Landing pages & CRO",
@@ -128,9 +128,54 @@
       "faq.q6": "Do you work with businesses outside e-commerce?",
       "faq.a6": "No — e-commerce only. That focus is exactly why we’re good at it.",
 
-      "ft.blurb": "Performance marketing agency specialized in e-commerce growth through Meta Ads, creative, CRO and AI automation.",
+      "nav.blog": "Blog",
+      "work.ugc": "Are you a content creator? Apply for paid UGC collaborations →",
+
+      "why.4t": "Agency ad accounts",
+      "why.4d": "We can run campaigns on agency ad accounts through Meta’s official partner Aleph — extra account stability and direct human support from Meta.",
+
+      "faq.q7": "What are agency ad accounts?",
+      "faq.a7": "Ad accounts provisioned through Meta’s official regional partner (Aleph). In practice: better account stability, faster issue resolution and access to real human support at Meta — not just chatbots and ticket queues.",
+
+      "news.title": "One useful e-com growth idea. <em>Monthly</em>.",
+      "news.sub": "Tactics from real campaigns — creative, CRO, Meta and Google Ads. No spam, unsubscribe anytime.",
+      "news.ph": "you@brand.com",
+      "news.btn": "Subscribe",
+      "news.ok": "Thanks — your email app just opened, hit send to confirm.",
+
+      "blog.title": "Growth <em>notes</em>.",
+      "blog.kicker": "Blog",
+      "blog.sub": "Practical writing on performance marketing, creative and CRO for e-commerce — written for store owners, readable by humans and AI alike.",
+      "blog.read": "Read article →",
+      "blog.back": "← All articles",
+
+      "ugc.eyebrow": "For creators",
+      "ugc.title": "Create UGC ads. <em>Get paid</em>.",
+      "ugc.lead": "We produce ads for e-commerce brands across Europe and are always looking for creators — for videos in English, German, BHS and other languages. No follower count required: we pay for content, not reach.",
+      "ugc.get.t": "What you get",
+      "ugc.get.1": "Paid per video — clear rates, agreed upfront",
+      "ugc.get.2": "Briefs and scripts from us — you focus on filming",
+      "ugc.get.3": "Products shipped to you, yours to keep",
+      "ugc.get.4": "Long-term collaboration if the work is good",
+      "ugc.look.t": "What we look for",
+      "ugc.look.1": "Solid smartphone video quality — good light and sound",
+      "ugc.look.2": "Natural, believable on-camera delivery",
+      "ugc.look.3": "Reliability — delivery within agreed deadlines",
+      "ugc.f.t": "Apply",
+      "ugc.f.name": "Name",
+      "ugc.f.email": "Email",
+      "ugc.f.social": "Instagram / TikTok profile",
+      "ugc.f.lang": "Languages you create in",
+      "ugc.f.about": "Briefly about you + links to example videos (if any)",
+      "ugc.f.btn": "Send application",
+      "ugc.f.note": "Submitting opens your email app with the application pre-filled. We reply within a few days if there’s a fit.",
+
+      "ft.blurb": "Performance marketing agency specialized in e-commerce growth through Meta & Google Ads, creative, CRO and AI automation.",
       "ft.services": "Services",
       "ft.contact": "Contact",
+      "ft.more": "More",
+      "ft.blog": "Blog",
+      "ft.ugc": "For UGC creators",
       "ft.rights": "All rights reserved.",
       "ft.top": "Back to top ↑"
     },
@@ -159,7 +204,7 @@
       "svc.title": "Full-stack <em>e-commerce</em> rast.",
       "svc.sub": "Ne radimo samo oglase. Preuzimamo kontrolu nad cijelim funnelom kako bismo osigurali maksimalan ROAS i profitabilnost.",
       "svc.1t": "Performance marketing",
-      "svc.1d": "Eksperti za Meta Ads platformu. Skaliramo kampanje bazirane na podacima, s fokusom na profit — ne na prazne metrike.",
+      "svc.1d": "Eksperti za Meta Ads platformu, uz Google Ads gdje donosi dodatne rezultate. Skaliramo kampanje bazirane na podacima, s fokusom na profit — ne na prazne metrike.",
       "svc.2t": "Izrada kreativa",
       "svc.2d": "Dizajniramo i produciramo video i statične oglase koji zaustavljaju scroll i konvertuju.",
       "svc.3t": "Landing stranice i CRO",
@@ -255,9 +300,54 @@
       "faq.q6": "Radite li s biznisima van e-commerca?",
       "faq.a6": "Ne — isključivo e-commerce. Upravo taj fokus je razlog zašto smo dobri u ovome.",
 
-      "ft.blurb": "Performance marketing agencija specijalizovana za e-commerce rast kroz Meta Ads, kreative, CRO i AI automatizaciju.",
+      "nav.blog": "Blog",
+      "work.ugc": "Ti si kreator sadržaja? Prijavi se za plaćene UGC saradnje →",
+
+      "why.4t": "Agency ad accounts",
+      "why.4d": "Kampanje po potrebi vodimo na agencijskim ad account-ima preko zvaničnog Metinog partnera Aleph — dodatna stabilnost naloga i direktna ljudska podrška od Mete.",
+
+      "faq.q7": "Šta su agency ad accounts?",
+      "faq.a7": "Ad account-i obezbijeđeni preko zvaničnog Metinog regionalnog partnera (Aleph). U praksi: stabilniji nalozi, brže rješavanje problema i pristup pravoj ljudskoj podršci u Meti — a ne samo chatbotovima i redovima čekanja.",
+
+      "news.title": "Jedna korisna ideja za e-com rast. <em>Mjesečno</em>.",
+      "news.sub": "Taktike iz stvarnih kampanja — kreative, CRO, Meta i Google Ads. Bez spama, odjava kad god hoćeš.",
+      "news.ph": "ti@tvojbrend.com",
+      "news.btn": "Prijavi se",
+      "news.ok": "Hvala — otvorio se tvoj email, samo klikni pošalji za potvrdu.",
+
+      "blog.title": "Bilješke o <em>rastu</em>.",
+      "blog.kicker": "Blog",
+      "blog.sub": "Praktični tekstovi o performance marketingu, kreativi i CRO-u za e-commerce — pisani za vlasnike shopova, čitljivi i ljudima i AI alatima.",
+      "blog.read": "Pročitaj tekst →",
+      "blog.back": "← Svi tekstovi",
+
+      "ugc.eyebrow": "Za kreatore",
+      "ugc.title": "Snimaj UGC oglase. <em>Naplati to</em>.",
+      "ugc.lead": "Produciramo oglase za e-commerce brendove širom Evrope i stalno tražimo kreatore — za videe na engleskom, njemačkom, BHS i drugim jezicima. Broj pratilaca nije bitan: plaćamo sadržaj, ne doseg.",
+      "ugc.get.t": "Šta dobijaš",
+      "ugc.get.1": "Plaćeno po videu — jasne cijene, dogovorene unaprijed",
+      "ugc.get.2": "Brief i scenario od nas — ti se fokusiraš na snimanje",
+      "ugc.get.3": "Proizvode šaljemo tebi i ostaju tvoji",
+      "ugc.get.4": "Dugoročna saradnja ako je posao dobar",
+      "ugc.look.t": "Šta tražimo",
+      "ugc.look.1": "Solidan kvalitet videa mobitelom — dobro svjetlo i zvuk",
+      "ugc.look.2": "Prirodan, uvjerljiv nastup pred kamerom",
+      "ugc.look.3": "Pouzdanost — isporuka u dogovorenim rokovima",
+      "ugc.f.t": "Prijavi se",
+      "ugc.f.name": "Ime",
+      "ugc.f.email": "Email",
+      "ugc.f.social": "Instagram / TikTok profil",
+      "ugc.f.lang": "Jezici na kojima snimaš",
+      "ugc.f.about": "Ukratko o tebi + linkovi na primjere videa (ako ih imaš)",
+      "ugc.f.btn": "Pošalji prijavu",
+      "ugc.f.note": "Slanjem se otvara tvoj email sa popunjenom prijavom. Odgovaramo u roku od par dana ako postoji poklapanje.",
+
+      "ft.blurb": "Performance marketing agencija specijalizovana za e-commerce rast kroz Meta i Google Ads, kreative, CRO i AI automatizaciju.",
       "ft.services": "Usluge",
       "ft.contact": "Kontakt",
+      "ft.more": "Ostalo",
+      "ft.blog": "Blog",
+      "ft.ugc": "Za UGC kreatore",
       "ft.rights": "Sva prava zadržana.",
       "ft.top": "Nazad na vrh ↑"
     }
@@ -276,6 +366,10 @@
     document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
       var key = el.getAttribute("data-i18n-html");
       if (I18N[lang][key] !== undefined) el.innerHTML = I18N[lang][key];
+    });
+    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-ph");
+      if (I18N[lang][key] !== undefined) el.placeholder = I18N[lang][key];
     });
     document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
       btn.setAttribute("aria-pressed", String(btn.getAttribute("data-lang") === lang));
@@ -378,6 +472,48 @@
         mobileNav.hidden = true;
         mobileNav.classList.remove("open");
       });
+    });
+  }
+
+  /* ----------------------------------------------------------- newsletter */
+  /* When you pick a provider (Mailchimp, Brevo, Buttondown…), paste its
+     form action URL here and the form will POST to it directly. While it
+     is empty, submissions fall back to a pre-filled email. */
+  var NEWSLETTER_ENDPOINT = "";
+
+  var newsForm = document.getElementById("newsletterForm");
+  if (newsForm) {
+    newsForm.addEventListener("submit", function (e) {
+      var email = (newsForm.querySelector("input[type=email]") || {}).value || "";
+      if (NEWSLETTER_ENDPOINT) {
+        newsForm.action = NEWSLETTER_ENDPOINT;
+        newsForm.method = "POST";
+        return;
+      }
+      e.preventDefault();
+      window.location.href = "mailto:hello@adsmerce.com?subject=" +
+        encodeURIComponent("Newsletter signup") +
+        "&body=" + encodeURIComponent("Please add me to the AdsMerce newsletter: " + email);
+      var ok = document.getElementById("newsOk");
+      if (ok) { ok.hidden = false; }
+    });
+  }
+
+  /* ---------------------------------------------------------- UGC applies */
+  var ugcForm = document.getElementById("ugcForm");
+  if (ugcForm) {
+    ugcForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var v = function (name) { return (ugcForm.querySelector('[name="' + name + '"]') || {}).value || "-"; };
+      var body =
+        "Name: " + v("name") + "\n" +
+        "Email: " + v("email") + "\n" +
+        "Profile: " + v("social") + "\n" +
+        "Languages: " + v("langs") + "\n\n" +
+        "About / examples:\n" + v("about") + "\n";
+      window.location.href = "mailto:hello@adsmerce.com?subject=" +
+        encodeURIComponent("UGC creator application — " + v("name")) +
+        "&body=" + encodeURIComponent(body);
     });
   }
 

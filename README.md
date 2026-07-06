@@ -6,11 +6,17 @@ Upload the folder contents to any hosting (Cloudflare Pages, Netlify, Vercel, or
 ## Structure
 
 ```
-index.html        the whole site (English by default)
+index.html        the main one-page site (English by default)
+ugc.html          landing page + application form for UGC creators
+blog/index.html   blog listing
+blog/*.html       individual posts (copy an existing post as a template)
 css/style.css     styles
 js/main.js        translations (EN/BHS), geo-IP language detection, interactions
 assets/           logo.svg, logo-white.svg, favicon.svg
 assets/clients/   client brand logos (shown in the marquee under the hero)
+robots.txt        crawler rules + sitemap pointer
+sitemap.xml       list of all pages (add new blog posts here!)
+llms.txt          site summary for AI crawlers/assistants
 docs/             design spec
 ```
 
@@ -37,6 +43,18 @@ docs/             design spec
 7. **Client logos** — the marquee shows all 13 logos from `assets/clients/`;
    add or remove `<img>` tags in `index.html` (remember: each logo appears twice,
    once in the visible track and once in the aria-hidden duplicate for the loop).
+8. **Newsletter provider** — the form currently falls back to a pre-filled email.
+   When you pick a provider (Mailchimp, Brevo, Buttondown…), paste its form action
+   URL into `NEWSLETTER_ENDPOINT` at the bottom of `js/main.js`.
+9. **UGC applications** — the form on `ugc.html` opens the applicant's email app
+   with a pre-filled application to hello@adsmerce.com. If you later create an
+   Airtable/Tally form, replace the `<form id="ugcForm">` block with their embed.
+10. **Agency ad accounts claim** — the "Why us" bullet and FAQ mention agency ad
+   accounts via Meta's partner Aleph. Verify the wording matches your actual setup.
+11. **Blog** — the launch-offer post (`blog/google-ads-starter-offer.html`) says
+   "fixed price" without naming one; add the price if you want it public. For each
+   new post: copy an existing post file, update title/description/JSON-LD/date,
+   add a card to `blog/index.html` and a URL entry to `sitemap.xml`.
 
 ## Notes
 

@@ -1,0 +1,19 @@
+# AdsMerce
+
+> Performance marketing agency for e-commerce brands. Meta Ads first, Google Ads where it
+> compounds results, plus creative production (UGC video and static ads), landing pages & CRO,
+> AI automation and e-commerce growth consulting. Track record: 8+ years, €50M+ ad spend
+> managed on Meta, 20+ e-commerce brands scaled across the EU, 4.3× average blended ROAS,
+> Meta Certified Media Buyer. Access to agency ad accounts through Meta's official partner
+> Aleph (better account stability, human support from Meta).
+
+Languages: English (default) and Bosnian/Croatian/Serbian (auto-detected for BA/RS/HR/ME visitors).
+Contact: hello@adsmerce.com. Engagements start with a free audit (5-minute Loom video analysis);
+no long-term contract lock-ins, month-to-month collaboration.
+
+## Pages
+
+- [Home](https://adsmerce.com/): services, results, process, FAQ and contact options
+- [Blog](https://adsmerce.com/blog/): practical writing on performance marketing, creative and CRO
+- [Google Ads starter package](https://adsmerce.com/blog/google-ads-starter-offer.html): fixed-scope offer for adding Google Ads as a second channel
+- [For UGC creators](https://adsmerce.com/ugc.html): paid UGC video collaborations — application form for creators
