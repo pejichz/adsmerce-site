@@ -17,7 +17,7 @@
 
       "hero.eyebrow": "Performance marketing for e-commerce brands",
       "hero.title": "Profit.<br>Not <em>pageviews</em>.",
-      "hero.lead": "We’ve put €50M+ to work on Meta for 20+ European e-commerce brands. No guessing — media buying, scroll-stopping creative and AI automation, all in service of one metric: profitable growth.",
+      "hero.lead": "We’ve put €50M+ to work on Meta for 20+ European e-commerce brands. No guessing, we combine media buying, scroll-stopping creative and AI automation, all in service of one metric: profitable growth.",
       "hero.cta1": "Get a free audit",
       "hero.cta2": "See our work",
       "hero.chip1": "4.3× average ROAS, last 12 months",
@@ -136,7 +136,7 @@
     },
     bs: {
       "nav.services": "Usluge",
-      "nav.work": "Kreativa",
+      "nav.work": "Kreative",
       "nav.results": "Rezultati",
       "nav.why": "Zašto mi",
       "nav.contact": "Kontakt",
@@ -144,7 +144,7 @@
 
       "hero.eyebrow": "Performance marketing agencija za e-commerce",
       "hero.title": "Profit,<br>ne <em>pregledi</em>.",
-      "hero.lead": "Uložili smo preko €50M u Meta oglase za 20+ evropskih e-commerce brendova. Ne nagađamo — media buying, kreativa koja zaustavlja scroll i AI automatizacija, sve u službi jedne metrike: profitabilnog rasta.",
+      "hero.lead": "Uložili smo preko €50M u Meta oglase za 20+ evropskih e-commerce brendova. Ne nagađamo, kombinujemo media buying, kreative koja zaustavlja scroll i AI automatizacija, sve u službi jedne metrike: profitabilnog rasta.",
       "hero.cta1": "Zatraži besplatan audit",
       "hero.cta2": "Pogledaj naš rad",
       "hero.chip1": "4.3× prosječni ROAS, zadnjih 12 mjeseci",
@@ -169,10 +169,10 @@
       "svc.5t": "E-com growth consulting",
       "svc.5d": "Holistički pristup rastu: ponuda, cjenovna strategija, LTV i zadržavanje kupaca. Partner u rastu, ne izvođač.",
 
-      "work.kicker": "Kreativa",
+      "work.kicker": "Kreative",
       "work.title": "Kreativa je novi <em>targeting</em>.",
-      "work.sub": "Pravimo video i statične oglase koji zaustavljaju scroll, prenose poruku i — najvažnije — donose prodaju.",
-      "work.note": "Izbor novijih formata — cijeli portfolio dostupan na upit.",
+      "work.sub": "Pravimo video i statične oglase koji zaustavljaju scroll, prenose poruku i najvažnije - donose prodaju.",
+      "work.note": "Nasumično odabrani primjeri — cijeli portfolio dostupan je na upit.",
       "work.f1": "UGC video oglas",
       "work.f2": "Product demo",
       "work.f3": "Advertorial video",
@@ -255,7 +255,7 @@
       "faq.q6": "Radite li s biznisima van e-commerca?",
       "faq.a6": "Ne — isključivo e-commerce. Upravo taj fokus je razlog zašto smo dobri u ovome.",
 
-      "ft.blurb": "Performance marketing agencija specijalizovana za e-commerce rast kroz Meta Ads, kreativu, CRO i AI automatizaciju.",
+      "ft.blurb": "Performance marketing agencija specijalizovana za e-commerce rast kroz Meta Ads, kreative, CRO i AI automatizaciju.",
       "ft.services": "Usluge",
       "ft.contact": "Kontakt",
       "ft.rights": "Sva prava zadržana.",
@@ -285,7 +285,7 @@
 
   function detectLang() {
     var stored = null;
-    try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+    try { stored = localStorage.getItem(STORAGE_KEY); } catch (e) { }
     if (stored && I18N[stored]) { applyLang(stored); return; }
 
     var controller = new AbortController();
@@ -308,7 +308,7 @@
   document.querySelectorAll(".lang-toggle button").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var lang = btn.getAttribute("data-lang");
-      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { }
       applyLang(lang);
     });
   });
