@@ -73,8 +73,8 @@
 
       "why.kicker": "Why us",
       "why.title": "A reliable partner for <em>e-commerce</em> growth.",
-      "why.1t": "Meta Certified Media Buyer",
-      "why.1d": "Officially certified by Meta for campaign management and budget optimization.",
+      "why.1t": "Meta & Google certified",
+      "why.1d": "Officially certified: Meta Media Buying Professional, Meta AI & Performance Marketing Specialist, and Google Ads.",
       "why.2t": "European experience",
       "why.2d": "20+ e-commerce brands successfully scaled across EU markets.",
       "why.3t": "Data-driven decisions",
@@ -274,8 +274,8 @@
 
       "why.kicker": "Zašto mi",
       "why.title": "Pouzdan partner za rast <em>e-commerce</em> biznisa.",
-      "why.1t": "Meta Certified Media Buyer",
-      "why.1d": "Zvanično certificirani od strane Mete za vođenje kampanja i optimizaciju budžeta.",
+      "why.1t": "Meta i Google certifikacije",
+      "why.1d": "Zvanične certifikacije: Meta Media Buying Professional, Meta AI & Performance Marketing Specialist i Google Ads.",
       "why.2t": "Evropsko iskustvo",
       "why.2d": "Uspješno skalirano 20+ e-commerce brendova širom EU tržišta.",
       "why.3t": "Odluke temeljene na podacima",
