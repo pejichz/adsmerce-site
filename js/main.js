@@ -48,7 +48,7 @@
       "work.note": "A selection of recent formats — full portfolio available on request.",
       "work.f1": "UGC video ad",
       "work.f2": "Product demo",
-      "work.f3": "Advertorial video",
+      "work.f3": "AI-generated video",
       "work.f4": "Static & carousel",
       "work.soon": "Sample coming soon",
 
@@ -196,7 +196,7 @@
       "pv.5t": "Your rights",
       "pv.5d": "Under GDPR you can request access, correction or deletion of your data at any time — one email to hello@adsmerce.com is enough.",
       "pv.6t": "Third-party services",
-      "pv.6d": "Google Analytics (traffic measurement), Meta Pixel (ad measurement and retargeting), ipapi.co (language auto-detection), Google Fonts (typography) and our newsletter provider once configured.",
+      "pv.6d": "Google Analytics (traffic measurement), Meta Pixel (ad measurement and retargeting), ipapi.co (language auto-detection), Google Fonts (typography), Wistia (video hosting — loads only when you click play on a video) and our newsletter provider once configured.",
 
       "ft.privacy": "Privacy policy",
       "ft.blurb": "Performance marketing agency specialized in e-commerce growth through Meta & Google Ads, creative, CRO and AI automation.",
@@ -249,7 +249,7 @@
       "work.note": "Nasumično odabrani primjeri — cijeli portfolio dostupan je na upit.",
       "work.f1": "UGC video oglas",
       "work.f2": "Product demo",
-      "work.f3": "Advertorial video",
+      "work.f3": "AI-generisani video",
       "work.f4": "Statični i carousel",
       "work.soon": "Primjer uskoro",
 
@@ -397,7 +397,7 @@
       "pv.5t": "Tvoja prava",
       "pv.5d": "Po GDPR-u u svakom trenutku možeš zatražiti uvid, ispravku ili brisanje svojih podataka — dovoljan je jedan email na hello@adsmerce.com.",
       "pv.6t": "Servisi trećih strana",
-      "pv.6d": "Google Analytics (mjerenje posjeta), Meta Pixel (mjerenje oglasa i retargeting), ipapi.co (automatsko prepoznavanje jezika), Google Fonts (tipografija) i newsletter servis kad bude podešen.",
+      "pv.6d": "Google Analytics (mjerenje posjeta), Meta Pixel (mjerenje oglasa i retargeting), ipapi.co (automatsko prepoznavanje jezika), Google Fonts (tipografija), Wistia (hosting videa — učitava se tek kad klikneš play na video) i newsletter servis kad bude podešen.",
 
       "ft.privacy": "Politika privatnosti",
       "ft.blurb": "Performance marketing agencija specijalizovana za e-commerce rast kroz Meta i Google Ads, kreative, CRO i AI automatizaciju.",
@@ -466,49 +466,83 @@
   });
 
   /* -------------------------------------------------------- creative grid */
-  /* Drop mp4 files into assets/creative/ and set `src` (and optional
-     `poster`) below, e.g. { src: "assets/creative/werkhus-ugc.mp4",
-     labelKey: "work.f1" }. Tiles without src render as placeholders. */
+  /* Each tile is one of:
+       { type: "wistia", id: "<hashedId>", poster: "<img>", labelKey: "…" }
+         — shows the local poster + play button; loads the Wistia player only
+           when the visitor clicks (no third-party request until then).
+       { type: "image", src: "<img>", labelKey: "…" } — static ad creative.
+       { labelKey: "…" } — placeholder tile ("sample coming soon").
+     To add a Wistia video: open the share link, the player embeds from
+     fast.wistia.net/embed/iframe/<hashedId>. */
   var CREATIVES = [
-    { src: null, labelKey: "work.f1" },
-    { src: null, labelKey: "work.f2" },
-    { src: null, labelKey: "work.f3" },
-    { src: null, labelKey: "work.f4" }
+    { type: "wistia", id: "ykip63i1al", poster: "assets/creative/ugc-video.jpg", labelKey: "work.f1" },
+    { type: "wistia", id: "evrykh8n27", poster: "assets/creative/product-demo.jpg", labelKey: "work.f2" },
+    { type: "wistia", id: "txxa4u95sx", poster: "assets/creative/ai-video.jpg", labelKey: "work.f3" },
+    { type: "image", src: "assets/creative/static-carousel.png", labelKey: "work.f4" }
   ];
+
+  function playWistia(tile, id, label) {
+    var frame = document.createElement("iframe");
+    frame.src = "https://fast.wistia.net/embed/iframe/" + id +
+      "?autoPlay=true&playerColor=0E6F4E";
+    frame.title = label;
+    frame.allow = "autoplay; fullscreen";
+    frame.setAttribute("allowfullscreen", "");
+    frame.className = "creative-frame";
+    tile.innerHTML = "";
+    tile.appendChild(frame);
+    tile.style.cursor = "default";
+  }
 
   function renderCreatives() {
     var grid = document.getElementById("creativeGrid");
     if (!grid) return;
     grid.innerHTML = "";
-    CREATIVES.forEach(function (item, i) {
+    CREATIVES.forEach(function (item) {
+      var label = I18N[currentLang][item.labelKey] || "";
       var tile = document.createElement("div");
       tile.className = "creative-tile reveal in";
+
       var tag = document.createElement("span");
       tag.className = "tag";
-      tag.textContent = I18N[currentLang][item.labelKey] || "";
+      tag.textContent = label;
       tile.appendChild(tag);
 
-      if (item.src) {
-        var video = document.createElement("video");
-        video.src = item.src;
-        if (item.poster) video.poster = item.poster;
-        video.muted = true;
-        video.loop = true;
-        video.playsInline = true;
-        video.preload = "metadata";
-        tile.appendChild(video);
-        tile.addEventListener("click", function () {
-          if (video.paused) { video.play(); } else { video.pause(); }
-        });
-      } else {
+      if (item.type === "wistia") {
+        var poster = document.createElement("img");
+        poster.src = item.poster;
+        poster.alt = label;
+        poster.loading = "lazy";
         var play = document.createElement("span");
         play.className = "play";
-        play.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3.5v9l7.5-4.5L5 3.5Z" fill="currentColor"/></svg>';
-        var label = document.createElement("span");
-        label.className = "label";
-        label.textContent = I18N[currentLang]["work.soon"];
+        play.innerHTML = '<svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3.5v9l7.5-4.5L5 3.5Z" fill="currentColor"/></svg>';
+        tile.appendChild(poster);
         tile.appendChild(play);
-        tile.appendChild(label);
+        tile.setAttribute("role", "button");
+        tile.setAttribute("tabindex", "0");
+        tile.setAttribute("aria-label", "Play: " + label);
+        var start = function () { playWistia(tile, item.id, label); };
+        tile.addEventListener("click", start);
+        tile.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); start(); }
+        });
+      } else if (item.type === "image") {
+        var img = document.createElement("img");
+        img.src = item.src;
+        img.alt = label;
+        img.loading = "lazy";
+        tile.style.cursor = "default";
+        tile.appendChild(img);
+      } else {
+        var pl = document.createElement("span");
+        pl.className = "play";
+        pl.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3.5v9l7.5-4.5L5 3.5Z" fill="currentColor"/></svg>';
+        var soon = document.createElement("span");
+        soon.className = "label";
+        soon.textContent = I18N[currentLang]["work.soon"];
+        tile.style.cursor = "default";
+        tile.appendChild(pl);
+        tile.appendChild(soon);
       }
       grid.appendChild(tile);
     });

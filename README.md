@@ -33,8 +33,11 @@ docs/             design spec
 1. **Calendly link** — `https://calendly.com/adsmerce` in `index.html` (Book a call button).
 2. **Email** — `hello@adsmerce.com` appears in the CTA button and footer.
 3. **Social links** — LinkedIn / Instagram URLs in the footer.
-4. **Ad creatives** — drop mp4 files into `assets/creative/` and set the `src` values
-   in the `CREATIVES` array in `js/main.js`. Tiles without `src` show placeholders.
+4. **Ad creatives** — the `CREATIVES` array in `js/main.js` holds the Work tiles.
+   Live now: 3 Wistia videos (facade pattern — local poster in `assets/creative/`,
+   player loads from `fast.wistia.net` only on click) + 1 static image. To add more:
+   push `{ type: "wistia", id: "<hashedId>", poster: "…", labelKey: "…" }`,
+   `{ type: "image", src: "…", labelKey: "…" }`, or a bare `{ labelKey }` placeholder.
 5. **Ads Manager screenshots** — replace the two dashed placeholder boxes in the
    Results section (`.shot`) with `<img>` tags once you export the screenshots.
 6. **FAQ numbers** — the answers state "€5k+/month minimum budget", "month to month,
