@@ -917,7 +917,7 @@ a { color: inherit; text-decoration: none; }
 /* ---------- founder ---------- */
 .founder-grid {
   display: grid;
-  grid-template-columns: 35fr 65fr;
+  grid-template-columns: 300px 1fr;
   gap: 56px;
   align-items: center;
 }
