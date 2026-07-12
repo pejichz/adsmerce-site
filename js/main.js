@@ -87,8 +87,8 @@
 
       "founder.kicker": "The founder",
       "founder.title": "Senior experience, directly on your account.",
-      "founder.body1": "AdsMerce is led by Zoran Pejić, a performance marketer with 8+ years of hands-on experience scaling e-commerce brands across European markets. He has worked with budgets over €50M across Meta, Google and TikTok — from campaign structure and creative production to CRO, automation and stock planning.",
-      "founder.body2": "Client accounts and strategy are never handed to juniors. When needed, we bring in vetted creators, designers and technical collaborators, while strategy and performance stay directly led.",
+      "founder.body1": "AdsMerce is led by Zoran Pejić, a performance marketer with 8+ years of hands-on experience scaling e-commerce brands across European markets.",
+      "founder.body2": "Strategy and key decisions aren’t handed off to juniors. When needed, we bring in vetted creators, designers and technical collaborators, while performance and the project’s direction stay directly led.",
       "founder.photo": "Founder photo",
       "founder.name": "Zoran Pejić",
       "founder.role": "Founder · AdsMerce",
@@ -306,8 +306,8 @@
 
       "founder.kicker": "Osnivač",
       "founder.title": "Senior iskustvo, direktno na tvom računu.",
-      "founder.body1": "AdsMerce vodi Zoran Pejić, performance marketer sa više od osam godina hands-on iskustva u skaliranju e-commerce brendova na evropskim tržištima. Radio je sa budžetima većim od €50M kroz Meta, Google i TikTok, od strukture kampanja i produkcije kreativa do CRO-a, automatizacije i planiranja zaliha.",
-      "founder.body2": "Klijentske račune i strategiju ne predajemo juniorima. Po potrebi uključujemo provjerene kreatore, dizajnere i tehničke saradnike, dok strategija i performance ostaju direktno vođeni.",
+      "founder.body1": "AdsMerce vodi Zoran Pejić, performance marketer sa više od osam godina hands-on iskustva u skaliranju e-commerce brendova na evropskim tržištima.",
+      "founder.body2": "Strategiju i ključne odluke ne prebacujemo na juniore. Po potrebi uključujemo provjerene kreatore, dizajnere i tehničke saradnike, dok performance i smjer projekta ostaju direktno vođeni.",
       "founder.photo": "Fotografija osnivača",
       "founder.name": "Zoran Pejić",
       "founder.role": "Osnivač · AdsMerce",
