@@ -17,7 +17,7 @@
 
       "hero.eyebrow": "Performance marketing for e-commerce brands",
       "hero.title": "Profit,<br>not <em>pageviews</em>.",
-      "hero.lead": "We help e-commerce brands scale sales profitably through performance marketing, continuous creative production and CRO. Behind us: €50M+ in ad budget managed for 20+ brands across Europe.",
+      "hero.lead": "We help e-commerce brands scale sales profitably through performance marketing, continuous creative production and CRO. €50M+ in ad budget managed for 20+ brands across Europe.",
       "hero.cta1": "Get a free audit",
       "hero.cta2": "See the results",
       "hero.chip1": "4.3× average ROAS · last 12 months",
@@ -83,13 +83,12 @@
       "why.2d": "You get senior, hands-on work based on 8+ years with e-commerce accounts across Europe. Strategy and key decisions aren’t handed to juniors after you sign.",
       "why.3t": "Your accounts stay yours",
       "why.3d": "We run campaigns from accounts you own. Data, ads and every asset we produce stay yours, no matter how long we work together.",
-      "why.chart": "total revenue generated for clients",
+      "why.chart": "revenue recorded across selected clients",
 
       "founder.kicker": "The founder",
       "founder.title": "Senior experience, directly on your account.",
       "founder.body1": "AdsMerce is led by Zoran Pejić, a performance marketer with 8+ years of hands-on experience scaling e-commerce brands across European markets.",
-      "founder.body2": "Strategy and key decisions aren’t handed off to juniors. When needed, we bring in vetted creators, designers and technical collaborators, while performance and the project’s direction stay directly led.",
-      "founder.photo": "Founder photo",
+      "founder.body2": "Strategy and key decisions aren’t handed off to juniors. When needed, we bring in vetted creators, designers and technical collaborators, while performance and the project’s direction stay in the founder’s hands.",
       "founder.name": "Zoran Pejić",
       "founder.role": "Founder · AdsMerce",
 
@@ -98,7 +97,7 @@
       "cta.sub": "Apply for a free audit if you’re considering a long-term collaboration, or book a 1-on-1 consultation if you want to solve a specific e-commerce problem.",
       "cta.free": "Free · for selected brands",
       "cta.a.t": "Free audit",
-      "cta.a.d": "A personalized Loom audit with the key findings and concrete steps to improve.",
+      "cta.a.d": "A personalized audit with the key findings and concrete steps to solve your biggest problem.",
       "cta.a.1": "Meta Ads account & results analysis",
       "cta.a.2": "Review of creative & messaging angles",
       "cta.a.3": "CRO review of key pages",
@@ -302,13 +301,12 @@
       "why.2d": "Dobijaš senior, hands-on pristup zasnovan na više od osam godina rada sa e-commerce računima širom Evrope. Strategiju i ključne odluke ne prebacujemo na juniore nakon potpisivanja saradnje.",
       "why.3t": "Tvoji računi ostaju tvoji",
       "why.3d": "Kampanje vodimo iz računa koje ti posjeduješ. Podaci, oglasi i svi materijali koje napravimo ostaju tvoji, bez obzira na trajanje saradnje.",
-      "why.chart": "ukupan prihod generisan za klijente",
+      "why.chart": "prihoda evidentiranog kod odabranih klijenata",
 
       "founder.kicker": "Osnivač",
-      "founder.title": "Senior iskustvo, direktno na tvom računu.",
+      "founder.title": "Senior iskustvo, direktno na tvom projektu.",
       "founder.body1": "AdsMerce vodi Zoran Pejić, performance marketer sa više od osam godina hands-on iskustva u skaliranju e-commerce brendova na evropskim tržištima.",
       "founder.body2": "Strategiju i ključne odluke ne prebacujemo na juniore. Po potrebi uključujemo provjerene kreatore, dizajnere i tehničke saradnike, dok performance i smjer projekta ostaju direktno vođeni.",
-      "founder.photo": "Fotografija osnivača",
       "founder.name": "Zoran Pejić",
       "founder.role": "Osnivač · AdsMerce",
 
@@ -317,7 +315,7 @@
       "cta.sub": "Prijavi se za besplatan audit ako razmatraš dugoročnu saradnju ili rezerviši 1-na-1 konsultacije ako želiš riješiti konkretan e-commerce problem.",
       "cta.free": "Besplatno · za odabrane brendove",
       "cta.a.t": "Besplatan audit",
-      "cta.a.d": "Personalizovani Loom audit sa najvažnijim nalazima i konkretnim koracima za poboljšanje.",
+      "cta.a.d": "Personalizovani audit sa najvažnijim nalazima i konkretnim koracima za rješenje najvećeg problema.",
       "cta.a.1": "Analiza Meta Ads računa i rezultata",
       "cta.a.2": "Pregled kreativa i komunikacijskih uglova",
       "cta.a.3": "CRO pregled ključnih stranica",
@@ -447,7 +445,7 @@
     }
   };
 
-  var currentLang = "en";
+  var currentLang = "bs";
 
   function applyLang(lang) {
     if (!I18N[lang]) return;
@@ -483,13 +481,13 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         clearTimeout(timer);
-        if (data && BHS_COUNTRIES.indexOf(data.country_code) !== -1) applyLang("bs");
+        if (data && data.country_code && BHS_COUNTRIES.indexOf(data.country_code) === -1) applyLang("en");
       })
       .catch(function () {
         clearTimeout(timer);
         var langs = navigator.languages || [navigator.language || ""];
         var isBhs = langs.some(function (l) { return /^(bs|hr|sr)/i.test(l || ""); });
-        if (isBhs) applyLang("bs");
+        if (!isBhs) applyLang("en");
       });
   }
 
@@ -743,6 +741,6 @@
   }
 
   /* ----------------------------------------------------------------- init */
-  applyLang("en");
+  applyLang("bs");
   detectLang();
 })();

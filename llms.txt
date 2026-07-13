@@ -1,21 +1,26 @@
 # AdsMerce
 
-> Performance marketing agency for e-commerce brands. Meta Ads first, Google and TikTok Ads
-> where they compound results, plus creative production (UGC video and static ads), landing pages & CRO,
-> AI automation and e-commerce growth consulting. Track record: 8+ years, €50M+ ad spend
-> managed on Meta, 20+ e-commerce brands scaled across the EU, 4.3× average blended ROAS.
-> Certifications: Meta Media Buying Professional, Meta AI and Performance Marketing
-> Specialist, Google Ads Certified, TikTok Media Buying Professional. Also runs Google Ads
-> and TikTok Ads alongside Meta. Access to agency ad accounts through Meta's official
-> partner Aleph (better account stability, human support from Meta).
+> Performance marketing agencija za e-commerce brendove. Meta oglasi kao osnova, Google i
+> TikTok oglasi tamo gdje donose dodatni profitabilan rast, uz produkciju kreativa (UGC video
+> i statični oglasi), landing stranice i CRO, AI automatizaciju i e-commerce growth consulting.
+> Track record: 8+ godina, €50M+ oglasnog budžeta vođeno na Meti, 20+ e-commerce brendova
+> skalirano širom Evrope, 4.3× prosječan blended ROAS. Vodi je Zoran Pejić
+> (linkedin.com/in/zoranpejic) — strategija i ključne odluke ostaju kod osnivača, ne prebacuju
+> se na juniore. Certifikati: Meta Media Buying Professional, Meta AI and Performance Marketing
+> Specialist, Google Ads Certified, TikTok Media Buying Professional. Pristup agency ad
+> accountima preko zvaničnog Metinog regionalnog partnera (stabilniji računi, ljudska podrška
+> od Mete).
 
-Languages: English (default) and Bosnian/Croatian/Serbian (auto-detected for BA/RS/HR/ME visitors).
-Contact: hello@adsmerce.com. Engagements start with a free audit (5-minute Loom video analysis);
-no long-term contract lock-ins, month-to-month collaboration.
+Jezici: bosanski/hrvatski/srpski (primarni) i engleski (automatski za posjetioce van BA/RS/HR/ME).
+Kontakt: hello@adsmerce.com. Saradnja počinje prijavom za besplatan audit — kratki uvodni
+poziv (15 min, cal.com/zoranpejic/15min), pa personalizovani audit za odabrane brendove.
+Dostupne i plaćene 1-na-1 konsultacije od 60 minuta (cal.com/zoranpejic/60min).
+Početni angažman 3 mjeseca, poslije toga saradnja iz mjeseca u mjesec — bez dugoročnog
+vezivanja. Klijent zadržava vlasništvo nad ad accountima, oglasima i svim materijalima.
 
-## Pages
+## Stranice
 
-- [Home](https://adsmerce.com/): services, results, process, FAQ and contact options
-- [Blog](https://adsmerce.com/blog/): practical writing on performance marketing, creative and CRO
-- [Google Ads starter package](https://adsmerce.com/blog/google-ads-starter-offer.html): fixed-scope offer for adding Google Ads as a second channel
-- [For UGC creators](https://adsmerce.com/ugc.html): paid UGC video collaborations — application form for creators
+- [Početna](https://adsmerce.com/): usluge, rezultati, proces, FAQ i opcije za kontakt
+- [Blog](https://adsmerce.com/blog/): praktični tekstovi o performance marketingu, kreativama i CRO-u
+- [Google Ads starter paket](https://adsmerce.com/blog/google-ads-starter-offer.html): paket fiksnog obima za uvođenje Google Adsa kao drugog kanala (tekst na engleskom)
+- [Za UGC kreatore](https://adsmerce.com/ugc.html): plaćene UGC video saradnje — prijava za kreatore
