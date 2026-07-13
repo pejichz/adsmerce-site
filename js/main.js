@@ -164,7 +164,7 @@
       "blog.back": "← All articles",
 
       "ugc.eyebrow": "For creators",
-      "ugc.title": "Create UGC ads and <em>get paid per video</em>.",
+      "ugc.title": "Create UGC ads<br>and <em>get paid per video</em>.",
       "ugc.lead1": "We send the product, the brief and clear guidelines. You film natural video content from home and receive an agreed fee per video.",
       "ugc.lead2": "You don’t need a large following and you don’t have to post anything on your own profile.",
       "ugc.cta": "Apply as a creator",
@@ -403,7 +403,7 @@
       "blog.back": "← Svi tekstovi",
 
       "ugc.eyebrow": "Za kreatore",
-      "ugc.title": "Snimaj UGC oglase i <em>zaradi po videu</em>.",
+      "ugc.title": "Snimaj UGC oglase<br>i <em>zaradi po videu</em>.",
       "ugc.lead1": "Mi šaljemo proizvod, brief i jasne smjernice. Ti snimaš prirodan video sadržaj od kuće i dobijaš dogovorenu naknadu po videu.",
       "ugc.lead2": "Nije ti potreban veliki broj pratilaca i ne moraš objavljivati sadržaj na svom profilu.",
       "ugc.cta": "Prijavi se kao kreator",
@@ -693,8 +693,8 @@
   var CONSENT_KEY = "adsmerce_consent";
   /* Path prefix so the privacy link works from subfolders (blog/) too. */
   var ROOT = (function () {
-    var s = document.querySelector('script[src$="main.js"]');
-    return s ? s.getAttribute("src").replace("js/main.js", "") : "";
+    var s = document.querySelector('script[src*="js/main.js"]');
+    return s ? s.getAttribute("src").replace(/js\/main\.js.*$/, "") : "";
   })();
 
   function loadTracking() {

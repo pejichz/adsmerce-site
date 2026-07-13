@@ -33,7 +33,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="sk.skip">Preskoči na sadržaj</a>
@@ -52,7 +52,7 @@
     </nav>
     <div class="nav-actions">
       <div class="lang-toggle" role="group" aria-label="Language">
-        <button type="button" data-lang="bs" aria-pressed="true">BS</button>
+        <button type="button" data-lang="bs" aria-pressed="true">BHS</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
       <a href="#prijava" class="btn btn-primary btn-sm" data-i18n="ugc.f.t">Prijavi se</a>
@@ -75,7 +75,7 @@
   <section class="ugc-hero">
     <div class="container">
       <p class="eyebrow reveal" data-i18n="ugc.eyebrow">Za kreatore</p>
-      <h1 class="reveal d1" style="font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;letter-spacing:-0.045em;line-height:1;margin-bottom:28px" data-i18n-html="ugc.title">Snimaj UGC oglase i <em>zaradi po videu</em>.</h1>
+      <h1 class="reveal d1" style="font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;letter-spacing:-0.045em;line-height:1;margin-bottom:28px" data-i18n-html="ugc.title">Snimaj UGC oglase<br>i <em>zaradi po videu</em>.</h1>
       <p class="lead reveal d2" data-i18n="ugc.lead1">Mi šaljemo proizvod, brief i jasne smjernice. Ti snimaš prirodan video sadržaj od kuće i dobijaš dogovorenu naknadu po videu.</p>
       <p class="lead reveal d2" data-i18n="ugc.lead2">Nije ti potreban veliki broj pratilaca i ne moraš objavljivati sadržaj na svom profilu.</p>
       <div class="hero-actions reveal d3">
@@ -147,7 +147,7 @@
         <h2 data-i18n-html="ugc.form.t">Forma za <em>prijavu</em>.</h2>
       </div>
       <div class="form-card reveal d1" style="max-width:760px;margin:0 auto">
-        <iframe data-tally-src="https://tally.so/embed/2EyvZp?alignLeft=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" loading="lazy" width="100%" height="988" frameborder="0" marginheight="0" marginwidth="0" title="Prijava za UGC video kreatore"></iframe>
+        <iframe data-tally-src="https://tally.so/embed/2EyvZp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="988" frameborder="0" marginheight="0" marginwidth="0" title="Prijava za UGC video kreatore"></iframe>
       </div>
     </div>
   </section>
@@ -197,7 +197,7 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=3"></script>
 <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </body>
 </html>
