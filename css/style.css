@@ -986,6 +986,7 @@ a { color: inherit; text-decoration: none; }
   .nav-actions .btn { display: none; }
   .nav-burger { display: flex; }
   .why-grid { grid-template-columns: 1fr; gap: 40px; }
+  .chart-card { display: none; }
   .founder-sign { flex-wrap: wrap; }
   .creative-grid { grid-template-columns: repeat(2, 1fr); }
   .svc-row { grid-template-columns: 56px 1fr; }
