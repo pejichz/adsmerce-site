@@ -16,6 +16,20 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Treba li mi veliki broj pratilaca?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Plaćamo sadržaj koji kreiraš, ne pristup tvojoj publici." } },
+    { "@type": "Question", "name": "Moram li objaviti video na svom profilu?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Snimaš i dostavljaš sadržaj koji će brend koristiti u oglasima." } },
+    { "@type": "Question", "name": "Treba li mi prethodno iskustvo?", "acceptedAnswer": { "@type": "Answer", "text": "Nije obavezno. Primjeri videa pomažu nam da procijenimo tvoj nastup, kvalitet snimanja i stil komunikacije." } },
+    { "@type": "Question", "name": "Koliko se plaća jedan video?", "acceptedAnswer": { "@type": "Answer", "text": "Naknada zavisi od proizvoda, zahtjevnosti briefa i broja videa. Tačan iznos uvijek znaš prije nego što prihvatiš projekat." } },
+    { "@type": "Question", "name": "Gdje će se moj video koristiti?", "acceptedAnswer": { "@type": "Answer", "text": "Najčešće u plaćenim oglasima na Meta platformama (Facebook i Instagram) i drugim digitalnim kanalima." } },
+    { "@type": "Question", "name": "Kada se vrši isplata?", "acceptedAnswer": { "@type": "Answer", "text": "Isplata se vrši u roku od 7 dana nakon dostavljanja finalnog sadržaja." } }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
@@ -41,7 +55,7 @@
         <button type="button" data-lang="bs" aria-pressed="true">BS</button>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
-      <a href="#apply" class="btn btn-primary btn-sm" data-i18n="ugc.f.t">Prijavi se</a>
+      <a href="#prijava" class="btn btn-primary btn-sm" data-i18n="ugc.f.t">Prijavi se</a>
       <button type="button" class="nav-burger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -53,7 +67,7 @@
     <a href="index.html#results" data-i18n="nav.results">Rezultati</a>
     <a href="blog/" data-i18n="nav.blog">Blog</a>
     <a href="index.html#contact" data-i18n="nav.contact">Kontakt</a>
-    <a href="#apply" class="btn btn-primary" data-i18n="ugc.f.t">Prijavi se</a>
+    <a href="#prijava" class="btn btn-primary" data-i18n="ugc.f.t">Prijavi se</a>
   </div>
 </header>
 
@@ -61,56 +75,114 @@
   <section class="ugc-hero">
     <div class="container">
       <p class="eyebrow reveal" data-i18n="ugc.eyebrow">Za kreatore</p>
-      <h1 class="reveal d1" style="font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;letter-spacing:-0.045em;line-height:1;margin-bottom:28px" data-i18n-html="ugc.title">Snimaj UGC oglase. <em>Naplati to</em>.</h1>
-      <p class="lead reveal d2" data-i18n="ugc.lead">Produciramo oglase za e-commerce brendove širom Evrope i stalno tražimo kreatore za videe na engleskom, njemačkom, BHS i drugim jezicima. Broj pratilaca nije bitan: plaćamo sadržaj, ne doseg.</p>
+      <h1 class="reveal d1" style="font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;letter-spacing:-0.045em;line-height:1;margin-bottom:28px" data-i18n-html="ugc.title">Snimaj UGC oglase i <em>zaradi po videu</em>.</h1>
+      <p class="lead reveal d2" data-i18n="ugc.lead1">Mi šaljemo proizvod, brief i jasne smjernice. Ti snimaš prirodan video sadržaj od kuće i dobijaš dogovorenu naknadu po videu.</p>
+      <p class="lead reveal d2" data-i18n="ugc.lead2">Nije ti potreban veliki broj pratilaca i ne moraš objavljivati sadržaj na svom profilu.</p>
+      <div class="hero-actions reveal d3">
+        <a href="#prijava" class="btn btn-primary" data-i18n="ugc.cta">Prijavi se kao kreator</a>
+      </div>
+      <p class="form-note reveal d3" data-i18n="ugc.ctanote">Prijava je besplatna. Cijenu, rok i uslove dogovaramo prije snimanja.</p>
     </div>
   </section>
 
-  <section>
-    <div class="container ugc-grid">
+  <section class="section section-alt">
+    <div class="container">
+      <div class="sec-head reveal">
+        <h2 data-i18n-html="ugc.how.t">Kako saradnja <em>izgleda</em>.</h2>
+      </div>
+      <div class="proc-grid">
+        <div class="proc-step reveal">
+          <span class="proc-num">1</span>
+          <h3 data-i18n="ugc.s1t">Pošalješ prijavu</h3>
+          <p data-i18n="ugc.s1d">Kažeš nam nešto o sebi, jezicima koje govoriš i vrstama sadržaja koje možeš snimati.</p>
+        </div>
+        <div class="proc-step reveal d1">
+          <span class="proc-num">2</span>
+          <h3 data-i18n="ugc.s2t">Dobiješ ponudu za projekat</h3>
+          <p data-i18n="ugc.s2d">Kada imamo proizvod koji odgovara tvom profilu, šaljemo ti brief, rok, zahtjeve i predloženu naknadu.</p>
+        </div>
+        <div class="proc-step reveal d2">
+          <span class="proc-num">3</span>
+          <h3 data-i18n="ugc.s3t">Snimiš sadržaj</h3>
+          <p data-i18n="ugc.s3d">Proizvod dobijaš na adresu, zajedno sa primjerima i jasnim smjernicama za snimanje.</p>
+        </div>
+        <div class="proc-step reveal d3">
+          <span class="proc-num">4</span>
+          <h3 data-i18n="ugc.s4t">Dobiješ isplatu</h3>
+          <p data-i18n="ugc.s4d">Nakon što dostaviš dogovoreni sadržaj, isplata se vrši prema uslovima potvrđenim prije početka projekta. Proizvod najčešće možeš zadržati.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container ugc-grid" style="padding-bottom:0">
       <div class="ugc-benefits reveal">
         <h3 data-i18n="ugc.get.t">Šta dobijaš</h3>
         <ul class="ugc-list">
-          <li data-i18n="ugc.get.1">Plaćeno po videu, jasne cijene dogovorene unaprijed</li>
-          <li data-i18n="ugc.get.2">Brief i scenario od nas, ti se fokusiraš na snimanje</li>
-          <li data-i18n="ugc.get.3">Proizvode šaljemo tebi i ostaju tvoji</li>
-          <li data-i18n="ugc.get.4">Dugoročna saradnja ako je posao dobar</li>
-        </ul>
-        <h3 data-i18n="ugc.look.t">Šta tražimo</h3>
-        <ul class="ugc-list">
-          <li data-i18n="ugc.look.1">Solidan kvalitet videa mobitelom, dobro svjetlo i zvuk</li>
-          <li data-i18n="ugc.look.2">Prirodan, uvjerljiv nastup pred kamerom</li>
-          <li data-i18n="ugc.look.3">Pouzdanost: isporuka u dogovorenim rokovima</li>
+          <li data-i18n="ugc.get.1">Plaćanje po dogovorenom videu</li>
+          <li data-i18n="ugc.get.2">Jasne primjere i smjernice za snimanje</li>
+          <li data-i18n="ugc.get.3">Proizvod dostavljen bez troška</li>
+          <li data-i18n="ugc.get.4">Mogućnost dugoročne saradnje</li>
+          <li data-i18n="ugc.get.5">Povratne informacije koje ti mogu pomoći da unaprijediš sadržaj</li>
         </ul>
       </div>
-      <div class="form-card reveal d1" id="apply">
-        <h3 data-i18n="ugc.f.t">Prijavi se</h3>
-        <form id="ugcForm">
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="ugc-name" data-i18n="ugc.f.name">Ime</label>
-              <input id="ugc-name" name="name" type="text" required>
-            </div>
-            <div class="form-field">
-              <label for="ugc-email" data-i18n="ugc.f.email">Email</label>
-              <input id="ugc-email" name="email" type="email" required>
-            </div>
-            <div class="form-field">
-              <label for="ugc-social" data-i18n="ugc.f.social">Instagram / TikTok profil</label>
-              <input id="ugc-social" name="social" type="text">
-            </div>
-            <div class="form-field">
-              <label for="ugc-langs" data-i18n="ugc.f.lang">Jezici na kojima snimaš</label>
-              <input id="ugc-langs" name="langs" type="text">
-            </div>
-            <div class="form-field full">
-              <label for="ugc-about" data-i18n="ugc.f.about">Ukratko o tebi + linkovi na primjere videa (ako ih imaš)</label>
-              <textarea id="ugc-about" name="about" rows="5"></textarea>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-green" style="margin-top:20px;width:100%" data-i18n="ugc.f.btn">Pošalji prijavu</button>
-          <p class="form-note" data-i18n="ugc.f.note">Slanjem se otvara tvoj email sa popunjenom prijavom. Odgovaramo u roku od par dana ako postoji poklapanje.</p>
-        </form>
+      <div class="ugc-benefits reveal d1">
+        <h3 data-i18n="ugc.look.t">Šta tražimo</h3>
+        <ul class="ugc-list">
+          <li data-i18n="ugc.look.1">Prirodan nastup pred kamerom</li>
+          <li data-i18n="ugc.look.2">Jasan vertikalni video, dobro svjetlo i čist zvuk</li>
+          <li data-i18n="ugc.look.3">Poštovanje uputa i dogovorenih rokova</li>
+          <li data-i18n="ugc.look.4">Pouzdanu i pravovremenu komunikaciju</li>
+          <li data-i18n="ugc.look.5">Da imaš 18-65+ godina</li>
+        </ul>
+        <p class="form-note" data-i18n="ugc.exp">Prethodno UGC iskustvo je prednost, ali nije obavezno.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="prijava">
+    <div class="container">
+      <div class="sec-head sec-head-center reveal">
+        <h2 data-i18n-html="ugc.form.t">Forma za <em>prijavu</em>.</h2>
+      </div>
+      <div class="form-card reveal d1" style="max-width:760px;margin:0 auto">
+        <iframe data-tally-src="https://tally.so/embed/2EyvZp?alignLeft=1&transparentBackground=1&dynamicHeight=1&formEventsForwarding=1" loading="lazy" width="100%" height="988" frameborder="0" marginheight="0" marginwidth="0" title="Prijava za UGC video kreatore"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container faq-container">
+      <div class="sec-head reveal">
+        <p class="kicker"><span>FAQ</span></p>
+        <h2 data-i18n-html="ugc.faq.t">Pitanja i <em>odgovori</em>.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary><span data-i18n="ugc.q1">Treba li mi veliki broj pratilaca?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p data-i18n="ugc.a1">Ne. Plaćamo sadržaj koji kreiraš, ne pristup tvojoj publici.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span data-i18n="ugc.q2">Moram li objaviti video na svom profilu?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p data-i18n="ugc.a2">Ne. Snimaš i dostavljaš sadržaj koji će brend koristiti u oglasima.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span data-i18n="ugc.q3">Treba li mi prethodno iskustvo?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p data-i18n="ugc.a3">Nije obavezno. Primjeri videa pomažu nam da procijenimo tvoj nastup, kvalitet snimanja i stil komunikacije.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span data-i18n="ugc.q4">Koliko se plaća jedan video?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p data-i18n="ugc.a4">Naknada zavisi od proizvoda, zahtjevnosti briefa i broja videa. Tačan iznos uvijek znaš prije nego što prihvatiš projekat.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span data-i18n="ugc.q5">Gdje će se moj video koristiti?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p data-i18n="ugc.a5">Najčešće u plaćenim oglasima na Meta platformama (Facebook i Instagram) i drugim digitalnim kanalima.</p>
+        </details>
+        <details class="faq-item reveal">
+          <summary><span data-i18n="ugc.q6">Kada se vrši isplata?</span><span class="faq-icon" aria-hidden="true"></span></summary>
+          <p data-i18n="ugc.a6">Isplata se vrši u roku od 7 dana nakon dostavljanja finalnog sadržaja.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -126,5 +198,6 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </body>
 </html>

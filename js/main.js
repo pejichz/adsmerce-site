@@ -11,7 +11,7 @@
       "nav.services": "Services",
       "nav.work": "Work",
       "nav.results": "Results",
-      "nav.why": "Why us",
+      "nav.why": "Why AdsMerce",
       "nav.contact": "Contact",
       "nav.cta": "Get a free audit",
 
@@ -164,25 +164,48 @@
       "blog.back": "← All articles",
 
       "ugc.eyebrow": "For creators",
-      "ugc.title": "Create UGC ads. <em>Get paid</em>.",
-      "ugc.lead": "We produce ads for e-commerce brands across Europe and are always looking for creators for videos in English, German, BHS and other languages. No follower count required: we pay for content, not reach.",
+      "ugc.title": "Create UGC ads and <em>get paid per video</em>.",
+      "ugc.lead1": "We send the product, the brief and clear guidelines. You film natural video content from home and receive an agreed fee per video.",
+      "ugc.lead2": "You don’t need a large following and you don’t have to post anything on your own profile.",
+      "ugc.cta": "Apply as a creator",
+      "ugc.ctanote": "Applying is free. Price, deadline and terms are agreed before filming.",
+      "ugc.how.t": "How the collaboration <em>works</em>.",
+      "ugc.s1t": "You send an application",
+      "ugc.s1d": "Tell us a bit about yourself, the languages you speak and the types of content you can film.",
+      "ugc.s2t": "You get a project offer",
+      "ugc.s2d": "When we have a product that fits your profile, we send you the brief, deadline, requirements and the proposed fee.",
+      "ugc.s3t": "You film the content",
+      "ugc.s3d": "The product arrives at your address, together with examples and clear filming guidelines.",
+      "ugc.s4t": "You get paid",
+      "ugc.s4d": "Once you deliver the agreed content, payment is made under the terms confirmed before the project started. You can usually keep the product.",
       "ugc.get.t": "What you get",
-      "ugc.get.1": "Paid per video, clear rates agreed upfront",
-      "ugc.get.2": "Briefs and scripts from us, you focus on filming",
-      "ugc.get.3": "Products shipped to you, yours to keep",
-      "ugc.get.4": "Long-term collaboration if the work is good",
+      "ugc.get.1": "Payment per agreed video",
+      "ugc.get.2": "Clear examples and filming guidelines",
+      "ugc.get.3": "The product delivered free of charge",
+      "ugc.get.4": "The possibility of long-term collaboration",
+      "ugc.get.5": "Feedback that can help you improve your content",
       "ugc.look.t": "What we look for",
-      "ugc.look.1": "Solid smartphone video quality, good light and sound",
-      "ugc.look.2": "Natural, believable on-camera delivery",
-      "ugc.look.3": "Reliability: delivery within agreed deadlines",
+      "ugc.look.1": "A natural on-camera presence",
+      "ugc.look.2": "Clear vertical video, good light and clean sound",
+      "ugc.look.3": "Following the brief and agreed deadlines",
+      "ugc.look.4": "Reliable and timely communication",
+      "ugc.look.5": "That you’re 18-65+ years old",
+      "ugc.exp": "Previous UGC experience is a plus, but not required.",
+      "ugc.form.t": "Application <em>form</em>.",
+      "ugc.faq.t": "Questions, <em>answered</em>.",
+      "ugc.q1": "Do I need a large following?",
+      "ugc.a1": "No. We pay for the content you create, not access to your audience.",
+      "ugc.q2": "Do I have to post the video on my own profile?",
+      "ugc.a2": "No. You film and deliver content that the brand uses in its ads.",
+      "ugc.q3": "Do I need previous experience?",
+      "ugc.a3": "It’s not required. Sample videos help us assess your on-camera presence, filming quality and communication style.",
+      "ugc.q4": "How much is one video paid?",
+      "ugc.a4": "The fee depends on the product, the complexity of the brief and the number of videos. You always know the exact amount before you accept a project.",
+      "ugc.q5": "Where will my video be used?",
+      "ugc.a5": "Most often in paid ads on Meta platforms (Facebook and Instagram) and other digital channels.",
+      "ugc.q6": "When do I get paid?",
+      "ugc.a6": "Payment is made within 7 days of delivering the final content.",
       "ugc.f.t": "Apply",
-      "ugc.f.name": "Name",
-      "ugc.f.email": "Email",
-      "ugc.f.social": "Instagram / TikTok profile",
-      "ugc.f.lang": "Languages you create in",
-      "ugc.f.about": "Briefly about you + links to example videos (if any)",
-      "ugc.f.btn": "Send application",
-      "ugc.f.note": "Submitting opens your email app with the application pre-filled. We reply within a few days if there’s a fit.",
 
       "sk.skip": "Skip to content",
 
@@ -210,7 +233,7 @@
       "pv.5t": "Your rights",
       "pv.5d": "Under GDPR you can request access, correction or deletion of your data at any time: one email to hello@adsmerce.com is enough.",
       "pv.6t": "Third-party services",
-      "pv.6d": "Google Analytics (traffic measurement), Meta Pixel (ad measurement and retargeting), ipapi.co (language auto-detection), Google Fonts (typography), Wistia (video hosting, loads only when you click play on a video) and our newsletter provider once configured.",
+      "pv.6d": "Google Analytics (traffic measurement), Meta Pixel (ad measurement and retargeting), ipapi.co (language auto-detection), Google Fonts (typography), Wistia (video hosting, loads only when you click play on a video), Tally (creator application form) and our newsletter provider once configured.",
 
       "ft.privacy": "Privacy policy",
       "ft.cookie": "Cookie policy",
@@ -227,7 +250,7 @@
       "nav.services": "Usluge",
       "nav.work": "Kreative",
       "nav.results": "Rezultati",
-      "nav.why": "Zašto mi",
+      "nav.why": "Zašto AdsMerce",
       "nav.contact": "Kontakt",
       "nav.cta": "Zatraži besplatan audit",
 
@@ -380,25 +403,48 @@
       "blog.back": "← Svi tekstovi",
 
       "ugc.eyebrow": "Za kreatore",
-      "ugc.title": "Snimaj UGC oglase. <em>Naplati to</em>.",
-      "ugc.lead": "Produciramo oglase za e-commerce brendove širom Evrope i stalno tražimo kreatore za videe na engleskom, njemačkom, BHS i drugim jezicima. Broj pratilaca nije bitan: plaćamo sadržaj, ne doseg.",
+      "ugc.title": "Snimaj UGC oglase i <em>zaradi po videu</em>.",
+      "ugc.lead1": "Mi šaljemo proizvod, brief i jasne smjernice. Ti snimaš prirodan video sadržaj od kuće i dobijaš dogovorenu naknadu po videu.",
+      "ugc.lead2": "Nije ti potreban veliki broj pratilaca i ne moraš objavljivati sadržaj na svom profilu.",
+      "ugc.cta": "Prijavi se kao kreator",
+      "ugc.ctanote": "Prijava je besplatna. Cijenu, rok i uslove dogovaramo prije snimanja.",
+      "ugc.how.t": "Kako saradnja <em>izgleda</em>.",
+      "ugc.s1t": "Pošalješ prijavu",
+      "ugc.s1d": "Kažeš nam nešto o sebi, jezicima koje govoriš i vrstama sadržaja koje možeš snimati.",
+      "ugc.s2t": "Dobiješ ponudu za projekat",
+      "ugc.s2d": "Kada imamo proizvod koji odgovara tvom profilu, šaljemo ti brief, rok, zahtjeve i predloženu naknadu.",
+      "ugc.s3t": "Snimiš sadržaj",
+      "ugc.s3d": "Proizvod dobijaš na adresu, zajedno sa primjerima i jasnim smjernicama za snimanje.",
+      "ugc.s4t": "Dobiješ isplatu",
+      "ugc.s4d": "Nakon što dostaviš dogovoreni sadržaj, isplata se vrši prema uslovima potvrđenim prije početka projekta. Proizvod najčešće možeš zadržati.",
       "ugc.get.t": "Šta dobijaš",
-      "ugc.get.1": "Plaćeno po videu, jasne cijene dogovorene unaprijed",
-      "ugc.get.2": "Brief i scenario od nas, ti se fokusiraš na snimanje",
-      "ugc.get.3": "Proizvode šaljemo tebi i ostaju tvoji",
-      "ugc.get.4": "Dugoročna saradnja ako je posao dobar",
+      "ugc.get.1": "Plaćanje po dogovorenom videu",
+      "ugc.get.2": "Jasne primjere i smjernice za snimanje",
+      "ugc.get.3": "Proizvod dostavljen bez troška",
+      "ugc.get.4": "Mogućnost dugoročne saradnje",
+      "ugc.get.5": "Povratne informacije koje ti mogu pomoći da unaprijediš sadržaj",
       "ugc.look.t": "Šta tražimo",
-      "ugc.look.1": "Solidan kvalitet videa mobitelom, dobro svjetlo i zvuk",
-      "ugc.look.2": "Prirodan, uvjerljiv nastup pred kamerom",
-      "ugc.look.3": "Pouzdanost: isporuka u dogovorenim rokovima",
+      "ugc.look.1": "Prirodan nastup pred kamerom",
+      "ugc.look.2": "Jasan vertikalni video, dobro svjetlo i čist zvuk",
+      "ugc.look.3": "Poštovanje uputa i dogovorenih rokova",
+      "ugc.look.4": "Pouzdanu i pravovremenu komunikaciju",
+      "ugc.look.5": "Da imaš 18-65+ godina",
+      "ugc.exp": "Prethodno UGC iskustvo je prednost, ali nije obavezno.",
+      "ugc.form.t": "Forma za <em>prijavu</em>.",
+      "ugc.faq.t": "Pitanja i <em>odgovori</em>.",
+      "ugc.q1": "Treba li mi veliki broj pratilaca?",
+      "ugc.a1": "Ne. Plaćamo sadržaj koji kreiraš, ne pristup tvojoj publici.",
+      "ugc.q2": "Moram li objaviti video na svom profilu?",
+      "ugc.a2": "Ne. Snimaš i dostavljaš sadržaj koji će brend koristiti u oglasima.",
+      "ugc.q3": "Treba li mi prethodno iskustvo?",
+      "ugc.a3": "Nije obavezno. Primjeri videa pomažu nam da procijenimo tvoj nastup, kvalitet snimanja i stil komunikacije.",
+      "ugc.q4": "Koliko se plaća jedan video?",
+      "ugc.a4": "Naknada zavisi od proizvoda, zahtjevnosti briefa i broja videa. Tačan iznos uvijek znaš prije nego što prihvatiš projekat.",
+      "ugc.q5": "Gdje će se moj video koristiti?",
+      "ugc.a5": "Najčešće u plaćenim oglasima na Meta platformama (Facebook i Instagram) i drugim digitalnim kanalima.",
+      "ugc.q6": "Kada se vrši isplata?",
+      "ugc.a6": "Isplata se vrši u roku od 7 dana nakon dostavljanja finalnog sadržaja.",
       "ugc.f.t": "Prijavi se",
-      "ugc.f.name": "Ime",
-      "ugc.f.email": "Email",
-      "ugc.f.social": "Instagram / TikTok profil",
-      "ugc.f.lang": "Jezici na kojima snimaš",
-      "ugc.f.about": "Ukratko o tebi + linkovi na primjere videa (ako ih imaš)",
-      "ugc.f.btn": "Pošalji prijavu",
-      "ugc.f.note": "Slanjem se otvara tvoj email sa popunjenom prijavom. Odgovaramo u roku od par dana ako postoji poklapanje.",
 
       "sk.skip": "Preskoči na sadržaj",
 
@@ -426,7 +472,7 @@
       "pv.5t": "Tvoja prava",
       "pv.5d": "Po GDPR-u u svakom trenutku možeš zatražiti uvid, ispravku ili brisanje svojih podataka: dovoljan je jedan email na hello@adsmerce.com.",
       "pv.6t": "Servisi trećih strana",
-      "pv.6d": "Google Analytics (mjerenje posjeta), Meta Pixel (mjerenje oglasa i retargeting), ipapi.co (automatsko prepoznavanje jezika), Google Fonts (tipografija), Wistia (hosting videa, učitava se tek kad klikneš play na video) i newsletter servis kad bude podešen.",
+      "pv.6d": "Google Analytics (mjerenje posjeta), Meta Pixel (mjerenje oglasa i retargeting), ipapi.co (automatsko prepoznavanje jezika), Google Fonts (tipografija), Wistia (hosting videa, učitava se tek kad klikneš play na video), Tally (forma za prijavu kreatora) i newsletter servis kad bude podešen.",
 
       "ft.privacy": "Politika privatnosti",
       "ft.cookie": "Politika kolačića",
@@ -618,24 +664,6 @@
         "&body=" + encodeURIComponent("Please add me to the AdsMerce newsletter: " + email);
       var ok = document.getElementById("newsOk");
       if (ok) { ok.hidden = false; }
-    });
-  }
-
-  /* ---------------------------------------------------------- UGC applies */
-  var ugcForm = document.getElementById("ugcForm");
-  if (ugcForm) {
-    ugcForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var v = function (name) { return (ugcForm.querySelector('[name="' + name + '"]') || {}).value || "-"; };
-      var body =
-        "Name: " + v("name") + "\n" +
-        "Email: " + v("email") + "\n" +
-        "Profile: " + v("social") + "\n" +
-        "Languages: " + v("langs") + "\n\n" +
-        "About / examples:\n" + v("about") + "\n";
-      window.location.href = "mailto:hello@adsmerce.com?subject=" +
-        encodeURIComponent("UGC creator application: " + v("name")) +
-        "&body=" + encodeURIComponent(body);
     });
   }
 
