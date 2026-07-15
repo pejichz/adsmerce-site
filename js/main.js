@@ -159,9 +159,13 @@
 
       "blog.title": "Growth <em>notes</em>.",
       "blog.kicker": "Blog",
-      "blog.sub": "Practical writing on performance marketing, creative and CRO for e-commerce, written for store owners and readable by humans and AI alike.",
+      "blog.sub": "Practical writing on advertising, creative, CRO and profitable e-commerce growth.",
       "blog.read": "Read article →",
       "blog.back": "← All articles",
+      "blog.cta.t": "Have a specific problem you want to <em>solve</em>?",
+      "blog.cta.d": "Apply for a free audit or book a 1-on-1 consultation.",
+      "blog.cta.b1": "Get a free audit",
+      "blog.cta.b2": "Book a consultation",
 
       "ugc.eyebrow": "For creators",
       "ugc.title": "Create UGC ads<br>and <em>get paid per video</em>.",
@@ -398,9 +402,13 @@
 
       "blog.title": "Bilješke o <em>rastu</em>.",
       "blog.kicker": "Blog",
-      "blog.sub": "Praktični tekstovi o performance marketingu, kreativi i CRO-u za e-commerce, pisani za vlasnike shopova i čitljivi i ljudima i AI alatima.",
+      "blog.sub": "Praktični tekstovi o oglašavanju, kreativama, CRO-u i profitabilnom rastu e-commerce brendova.",
       "blog.read": "Pročitaj tekst →",
       "blog.back": "← Svi tekstovi",
+      "blog.cta.t": "Imaš konkretan problem koji želiš <em>riješiti</em>?",
+      "blog.cta.d": "Prijavi se za besplatan audit ili rezerviši 1-na-1 konsultacije.",
+      "blog.cta.b1": "Zatraži besplatan audit",
+      "blog.cta.b2": "Rezerviši konsultacije",
 
       "ugc.eyebrow": "Za kreatore",
       "ugc.title": "Snimaj UGC oglase<br>i <em>zaradi po videu</em>.",
