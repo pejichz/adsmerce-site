@@ -22,5 +22,5 @@ vezivanja. Klijent zadržava vlasništvo nad ad accountima, oglasima i svim mate
 
 - [Početna](https://adsmerce.com/): usluge, rezultati, proces, FAQ i opcije za kontakt
 - [Blog](https://adsmerce.com/blog/): praktični tekstovi o performance marketingu, kreativama i CRO-u
-- [Google Ads starter paket](https://adsmerce.com/blog/google-ads-starter-offer.html): paket fiksnog obima za uvođenje Google Adsa kao drugog kanala (tekst na engleskom)
+- [Google Ads za e-commerce](https://adsmerce.com/blog/google-ads-starter-offer.html): šta postaviti prije pokretanja kampanja (feed, tracking, struktura, budžet) i kako izgleda početni paket fiksnog obima
 - [Za UGC kreatore](https://adsmerce.com/ugc.html): plaćene UGC video saradnje, prijava za kreatore
