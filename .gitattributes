@@ -1,0 +1,5 @@
+# CNAME and robots.txt intentionally differ between the production branch
+# (main -> adsmerce.com, indexable) and the staging branch (staging ->
+# demo.adsmerce.com, noindex). Keep each branch's own copy when merging.
+CNAME merge=ours
+robots.txt merge=ours
