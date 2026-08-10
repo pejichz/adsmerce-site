@@ -58,11 +58,19 @@ docs/             design spec
    "fixed price" without naming one; add the price if you want it public. For each
    new post: copy an existing post file, update title/description/JSON-LD/date,
    add a card to `blog/index.html` and a URL entry to `sitemap.xml`.
-12. **Analytics & Meta Pixel** — paste your IDs into `GA4_ID` and `META_PIXEL_ID`
-   near the bottom of `js/main.js`. While both are empty nothing loads and no
-   cookie banner shows. Once either is set, the GDPR consent banner appears
-   automatically and tracking loads only after the visitor clicks Accept.
-   The privacy policy page (`privacy.html`) has a "reset cookie choice" button.
+12. **Analytics & Meta Pixel** — `GA4_ID` near the bottom of `js/main.js` is set to
+   the live GA4 property (`G-6XRG7P94DM`); `META_PIXEL_ID` is still empty. Because
+   an ID is set, the GDPR consent banner now shows and `gtag.js` loads only after
+   the visitor clicks Accept — so GA4 records nothing for visitors who decline or
+   ignore the banner, and Google's "tag not detected" check will fail until you
+   accept the banner yourself. The privacy policy page (`privacy.html`) has a
+   "reset cookie choice" button for re-testing. Tracking is also gated on
+   `TRACKING_HOSTS`, so it stays off on demo.adsmerce.com and local previews —
+   this file is shared with `staging`, and without the gate demo traffic would
+   land in the same property. Add a host there if you ever need it counted.
+13. **Search Console** — verified with the HTML-tag method: the
+   `google-site-verification` meta tag lives in the `<head>` of `index.html`.
+   Keep it there; removing it un-verifies the property.
 
 ## Notes
 

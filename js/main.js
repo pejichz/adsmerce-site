@@ -695,8 +695,17 @@
   /* Paste your IDs here when ready. While both are empty, no tracking code
      loads and no cookie banner is shown. Tracking only ever loads after the
      visitor clicks Accept (GDPR consent). */
-  var GA4_ID = "";        /* e.g. "G-XXXXXXXXXX" */
+  var GA4_ID = "G-6XRG7P94DM";
   var META_PIXEL_ID = ""; /* e.g. "123456789012345" */
+
+  /* This file is shared with the staging branch, so gate tracking on the
+     production host — otherwise demo.adsmerce.com and local previews would
+     report into the same GA4 property as real traffic. */
+  var TRACKING_HOSTS = ["adsmerce.com", "www.adsmerce.com"];
+  if (TRACKING_HOSTS.indexOf(location.hostname) === -1) {
+    GA4_ID = "";
+    META_PIXEL_ID = "";
+  }
 
   var CONSENT_KEY = "adsmerce_consent";
   /* Path prefix so the privacy link works from subfolders (blog/) too. */
