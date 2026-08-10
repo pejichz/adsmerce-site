@@ -228,12 +228,13 @@
       "pv.1t": "Who we are",
       "pv.1d": "AdsMerce is a performance marketing agency for e-commerce brands. For anything related to your data, write to hello@adsmerce.com.",
       "pv.2t": "What we collect",
-      "pv.2d": "Emails you send us and newsletter sign-ups (your email address). With your consent, anonymous analytics data (Google Analytics) and advertising data via Meta Pixel. To auto-detect your language, your IP country is looked up once via ipapi.co. We don’t store your IP.",
+      "pv.2d": "Emails you send us and newsletter sign-ups (your email address). Anonymous analytics data (Google Analytics), and advertising data via Meta Pixel once it is switched on — these load on every visit unless you opt out below. To auto-detect your language, your IP country is looked up once via ipapi.co. We don’t store your IP.",
       "pv.3t": "Why we collect it",
       "pv.3d": "To reply to you, send the newsletter you asked for, understand how the site is used and measure our own advertising. We never sell or share your data.",
-      "pv.4t": "Cookies & consent",
-      "pv.4d": "Analytics and Meta Pixel run only after you click Accept in the cookie banner. You can change your mind anytime:",
-      "pv.4btn": "Reset my cookie choice",
+      "pv.4t": "Cookies & analytics",
+      "pv.4d": "Analytics starts as soon as you open the site, so we can see how it is used. If you would rather not be counted, opt out here — the choice is kept in your browser and applies to this and future visits:",
+      "pv.4btn": "Opt out of analytics",
+      "pv.4btnOn": "Analytics is off. Turn it back on",
       "pv.5t": "Your rights",
       "pv.5d": "Under GDPR you can request access, correction or deletion of your data at any time: one email to hello@adsmerce.com is enough.",
       "pv.6t": "Third-party services",
@@ -471,12 +472,13 @@
       "pv.1t": "Ko smo mi",
       "pv.1d": "AdsMerce je performance marketing agencija za e-commerce brendove. Za sve u vezi tvojih podataka piši na hello@adsmerce.com.",
       "pv.2t": "Šta prikupljamo",
-      "pv.2d": "Emailove koje nam pošalješ i prijave na newsletter (tvoja email adresa). Uz tvoj pristanak, anonimne analitičke podatke (Google Analytics) i podatke za oglašavanje putem Meta Pixela. Za automatsko prepoznavanje jezika, država tvoje IP adrese se jednom provjerava preko ipapi.co. Tvoju IP adresu ne čuvamo.",
+      "pv.2d": "Emailove koje nam pošalješ i prijave na newsletter (tvoja email adresa). Anonimne analitičke podatke (Google Analytics), a kad Meta Pixel bude uključen i podatke za oglašavanje — to se učitava pri svakoj posjeti, osim ako se ispod ne isključiš. Za automatsko prepoznavanje jezika, država tvoje IP adrese se jednom provjerava preko ipapi.co. Tvoju IP adresu ne čuvamo.",
       "pv.3t": "Zašto prikupljamo",
       "pv.3d": "Da ti odgovorimo, pošaljemo newsletter koji si tražio/la, razumijemo kako se sajt koristi i mjerimo vlastito oglašavanje. Tvoje podatke nikad ne prodajemo niti dijelimo.",
-      "pv.4t": "Kolačići i pristanak",
-      "pv.4d": "Analitika i Meta Pixel se pokreću tek nakon što klikneš Prihvati u banneru za kolačiće. Odluku možeš promijeniti bilo kad:",
-      "pv.4btn": "Resetuj moj izbor kolačića",
+      "pv.4t": "Kolačići i analitika",
+      "pv.4d": "Analitika se pokreće odmah kad otvoriš sajt, kako bismo vidjeli kako se koristi. Ako ne želiš da te brojimo, isključi je ovdje — izbor se čuva u tvom pregledniku i važi za ovu i buduće posjete:",
+      "pv.4btn": "Isključi analitiku",
+      "pv.4btnOn": "Analitika je isključena. Uključi ponovo",
       "pv.5t": "Tvoja prava",
       "pv.5d": "Po GDPR-u u svakom trenutku možeš zatražiti uvid, ispravku ili brisanje svojih podataka: dovoljan je jedan email na hello@adsmerce.com.",
       "pv.6t": "Servisi trećih strana",
@@ -693,10 +695,16 @@
 
   /* --------------------------------------------------- analytics & pixel */
   /* Paste your IDs here when ready. While both are empty, no tracking code
-     loads and no cookie banner is shown. Tracking only ever loads after the
-     visitor clicks Accept (GDPR consent). */
+     loads at all. */
   var GA4_ID = "G-6XRG7P94DM";
   var META_PIXEL_ID = ""; /* e.g. "123456789012345" */
+
+  /* Tracking loads on page load without asking first. Flip this to true to
+     go back to opt-in: nothing loads until the visitor clicks Accept in the
+     cookie banner. The banner code below is kept intact for that reason, so
+     switching back is a one-line change. Either way, a visitor who opts out
+     on privacy.html stays untracked. */
+  var REQUIRE_CONSENT = false;
 
   /* This file is shared with the staging branch, so gate tracking on the
      production host — otherwise demo.adsmerce.com and local previews would
@@ -771,10 +779,34 @@
     location.reload();
   };
 
+  /* Opt-out toggle on privacy.html. Reads the stored choice so the button
+     says what a click will actually do, and swaps its data-i18n key so a
+     later language switch keeps the right label. */
+  function wireOptOut() {
+    var btn = document.getElementById("optOut");
+    if (!btn) return;
+    function stored() {
+      try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
+    }
+    var key = stored() === "denied" ? "pv.4btnOn" : "pv.4btn";
+    btn.setAttribute("data-i18n", key);
+    btn.textContent = I18N[currentLang][key];
+    btn.addEventListener("click", function () {
+      try {
+        if (stored() === "denied") localStorage.removeItem(CONSENT_KEY);
+        else localStorage.setItem(CONSENT_KEY, "denied");
+      } catch (e) { }
+      location.reload();
+    });
+  }
+
   if (GA4_ID || META_PIXEL_ID) {
     var consent = null;
     try { consent = localStorage.getItem(CONSENT_KEY); } catch (e) { }
-    if (consent === "granted") {
+    if (!REQUIRE_CONSENT) {
+      /* Default on — only an explicit opt-out keeps tracking off. */
+      if (consent !== "denied") loadTracking();
+    } else if (consent === "granted") {
       loadTracking();
     } else if (!consent) {
       buildConsentBanner();
@@ -782,6 +814,7 @@
   }
 
   /* ----------------------------------------------------------------- init */
+  wireOptOut();
   applyLang("bs");
   detectLang();
 })();

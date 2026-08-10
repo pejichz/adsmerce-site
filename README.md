@@ -59,15 +59,19 @@ docs/             design spec
    new post: copy an existing post file, update title/description/JSON-LD/date,
    add a card to `blog/index.html` and a URL entry to `sitemap.xml`.
 12. **Analytics & Meta Pixel** — `GA4_ID` near the bottom of `js/main.js` is set to
-   the live GA4 property (`G-6XRG7P94DM`); `META_PIXEL_ID` is still empty. Because
-   an ID is set, the GDPR consent banner now shows and `gtag.js` loads only after
-   the visitor clicks Accept — so GA4 records nothing for visitors who decline or
-   ignore the banner, and Google's "tag not detected" check will fail until you
-   accept the banner yourself. The privacy policy page (`privacy.html`) has a
-   "reset cookie choice" button for re-testing. Tracking is also gated on
+   the live GA4 property (`G-6XRG7P94DM`); `META_PIXEL_ID` is still empty.
+   `REQUIRE_CONSENT` is `false`, so `gtag.js` loads on page load without asking
+   and no cookie banner is shown. The banner code is still there — set
+   `REQUIRE_CONSENT = true` to go back to opt-in (nothing loads until the visitor
+   clicks Accept). Visitors can still opt out from `privacy.html`, which stores
+   the choice and keeps them untracked; the wording there describes whichever
+   mode is active, so update it if you flip the flag. Tracking is also gated on
    `TRACKING_HOSTS`, so it stays off on demo.adsmerce.com and local previews —
    this file is shared with `staging`, and without the gate demo traffic would
    land in the same property. Add a host there if you ever need it counted.
+   Note the tradeoff you accepted: tracking without prior consent is what GDPR
+   and the ePrivacy directive restrict for EU visitors, which is most of this
+   site's audience. Flipping `REQUIRE_CONSENT` back to `true` is the fix.
 13. **Search Console** — verified with the HTML-tag method: the
    `google-site-verification` meta tag lives in the `<head>` of `index.html`.
    Keep it there; removing it un-verifies the property.
