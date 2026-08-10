@@ -72,9 +72,20 @@ docs/             design spec
    Note the tradeoff you accepted: tracking without prior consent is what GDPR
    and the ePrivacy directive restrict for EU visitors, which is most of this
    site's audience. Flipping `REQUIRE_CONSENT` back to `true` is the fix.
-13. **Search Console** — verified with the HTML-tag method: the
-   `google-site-verification` meta tag lives in the `<head>` of `index.html`.
-   Keep it there; removing it un-verifies the property.
+13. **Search Console** — the `google-site-verification` meta tag in the `<head>` of
+   `index.html` verifies a **URL prefix** property (`https://adsmerce.com/`) only.
+   A **Domain** property (`adsmerce.com`, covering every subdomain and both
+   protocols) cannot be verified from this repo at all — it needs a DNS TXT
+   record on the apex, added at whoever hosts the domain's DNS:
+
+       type  TXT
+       host  @            (apex — not "www", and not "adsmerce.com" if the
+                           provider appends the domain for you)
+       value google-site-verification=<token from Search Console>
+
+   Add it alongside any existing TXT records rather than replacing them, or you
+   will break SPF. The two methods issue different tokens, so a token copied
+   from the DNS screen will not verify via the meta tag, and vice versa.
 
 ## Notes
 
