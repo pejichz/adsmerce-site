@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- One policy shared by every page: a single list is far less likely to
+     silently break than four drifting ones. Origins in use: Google Fonts,
+     gtag.js, Wistia (video), Tally (UGC form), ipapi.co (language). Must stay
+     above the first resource tag — anything before it is not covered.
+     frame-ancestors cannot be set from a meta tag, so clickjacking defence
+     would need a real HTTP header, which GitHub Pages cannot send. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-src https://fast.wistia.net https://tally.so; script-src 'self' https://www.googletagmanager.com https://connect.facebook.net https://tally.so; connect-src 'self' https://ipapi.co https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com; img-src 'self' data: https://*.google-analytics.com https://www.facebook.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Postani UGC kreator · AdsMerce</title>
 <meta name="description" content="Snimaj UGC video oglase za evropske e-commerce brendove i naplati po videu. Broj pratilaca nije bitan, plaćamo sadržaj, ne doseg. Prijavi se.">
 <link rel="canonical" href="https://adsmerce.com/ugc.html">
@@ -19,21 +27,33 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Treba li mi veliki broj pratilaca?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Plaćamo sadržaj koji kreiraš, ne pristup tvojoj publici." } },
-    { "@type": "Question", "name": "Moram li objaviti video na svom profilu?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Snimaš i dostavljaš sadržaj koji će brend koristiti u oglasima." } },
-    { "@type": "Question", "name": "Treba li mi prethodno iskustvo?", "acceptedAnswer": { "@type": "Answer", "text": "Nije obavezno. Primjeri videa pomažu nam da procijenimo tvoj nastup, kvalitet snimanja i stil komunikacije." } },
-    { "@type": "Question", "name": "Koliko se plaća jedan video?", "acceptedAnswer": { "@type": "Answer", "text": "Naknada zavisi od proizvoda, zahtjevnosti briefa i broja videa. Tačan iznos uvijek znaš prije nego što prihvatiš projekat." } },
-    { "@type": "Question", "name": "Gdje će se moj video koristiti?", "acceptedAnswer": { "@type": "Answer", "text": "Najčešće u plaćenim oglasima na Meta platformama (Facebook i Instagram) i drugim digitalnim kanalima." } },
-    { "@type": "Question", "name": "Kada se vrši isplata?", "acceptedAnswer": { "@type": "Answer", "text": "Isplata se vrši u roku od 7 dana nakon dostavljanja finalnog sadržaja." } }
+  "@graph": [
+    {
+      "@type": ["WebPage", "FAQPage"],
+      "@id": "https://adsmerce.com/ugc.html",
+      "url": "https://adsmerce.com/ugc.html",
+      "name": "Postani UGC kreator \u00b7 AdsMerce",
+      "description": "Snimaj UGC video oglase za evropske e-commerce brendove i naplati po videu. Broj pratilaca nije bitan, pla\u0107amo sadr\u017eaj, ne doseg.",
+      "inLanguage": "bs",
+      "isPartOf": { "@id": "https://adsmerce.com/#website" },
+      "publisher": { "@id": "https://adsmerce.com/#org" },
+      "about": { "@id": "https://adsmerce.com/#org" },
+      "mainEntity": [
+        { "@type": "Question", "name": "Treba li mi veliki broj pratilaca?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Plaćamo sadržaj koji kreiraš, ne pristup tvojoj publici." } },
+        { "@type": "Question", "name": "Moram li objaviti video na svom profilu?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Snimaš i dostavljaš sadržaj koji će brend koristiti u oglasima." } },
+        { "@type": "Question", "name": "Treba li mi prethodno iskustvo?", "acceptedAnswer": { "@type": "Answer", "text": "Nije obavezno. Primjeri videa pomažu nam da procijenimo tvoj nastup, kvalitet snimanja i stil komunikacije." } },
+        { "@type": "Question", "name": "Koliko se plaća jedan video?", "acceptedAnswer": { "@type": "Answer", "text": "Naknada zavisi od proizvoda, zahtjevnosti briefa i broja videa. Tačan iznos uvijek znaš prije nego što prihvatiš projekat." } },
+        { "@type": "Question", "name": "Gdje će se moj video koristiti?", "acceptedAnswer": { "@type": "Answer", "text": "Najčešće u plaćenim oglasima na Meta platformama (Facebook i Instagram) i drugim digitalnim kanalima." } },
+        { "@type": "Question", "name": "Kada se vrši isplata?", "acceptedAnswer": { "@type": "Answer", "text": "Isplata se vrši u roku od 7 dana nakon dostavljanja finalnog sadržaja." } }
+      ]
+    }
   ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="sk.skip">Preskoči na sadržaj</a>
@@ -41,7 +61,7 @@
 <header class="nav" id="top">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo" aria-label="AdsMerce home">
-      <img src="assets/logo.svg" alt="adsmerce." height="20">
+      <img src="assets/logo.svg" alt="adsmerce." width="107" height="20">
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="index.html#services" data-i18n="nav.services">Usluge</a>
@@ -73,7 +93,7 @@
   <section class="ugc-hero">
     <div class="container">
       <p class="eyebrow reveal" data-i18n="ugc.eyebrow">Za kreatore</p>
-      <h1 class="reveal d1" style="font-size:clamp(2.8rem,7vw,5.4rem);font-weight:800;letter-spacing:-0.045em;line-height:1;margin-bottom:28px" data-i18n-html="ugc.title">Snimaj UGC oglase<br>i <em>zaradi po videu</em>.</h1>
+      <h1 class="reveal d1" data-i18n-html="ugc.title">Snimaj UGC oglase<br>i <em>zaradi po videu</em>.</h1>
       <p class="lead reveal d2" data-i18n="ugc.lead1">Mi šaljemo proizvod, brief i jasne smjernice. Ti snimaš prirodan video sadržaj od kuće i dobijaš dogovorenu naknadu po videu.</p>
       <p class="lead reveal d2" data-i18n="ugc.lead2">Nije ti potreban veliki broj pratilaca i ne moraš objavljivati sadržaj na svom profilu.</p>
       <div class="hero-actions reveal d3">
@@ -114,7 +134,7 @@
   </section>
 
   <section class="section">
-    <div class="container ugc-grid" style="padding-bottom:0">
+    <div class="container ugc-grid is-flush-bottom">
       <div class="ugc-benefits reveal">
         <h3 data-i18n="ugc.get.t">Šta dobijaš</h3>
         <ul class="ugc-list">
@@ -144,7 +164,7 @@
       <div class="sec-head sec-head-center reveal">
         <h2 data-i18n-html="ugc.form.t">Forma za <em>prijavu</em>.</h2>
       </div>
-      <div class="form-card reveal d1" style="max-width:760px;margin:0 auto">
+      <div class="form-card reveal d1 is-narrow">
         <iframe data-tally-src="https://tally.so/embed/2EyvZp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="988" frameborder="0" marginheight="0" marginwidth="0" title="Prijava za UGC video kreatore"></iframe>
       </div>
     </div>
@@ -188,14 +208,14 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-bottom" style="padding-top:0">
+    <div class="footer-bottom is-flush-top">
       <span>© 2026 AdsMerce. <span data-i18n="ft.rights">Sva prava zadržana.</span></span>
       <span><a href="privacy.html" data-i18n="ft.privacy">Politika privatnosti</a> · <a href="index.html">adsmerce.com</a></span>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js?v=5"></script>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+<script src="js/main.js?v=6"></script>
+<script src="js/tally-embed.js?v=6"></script>
 </body>
 </html>

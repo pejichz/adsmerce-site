@@ -12,6 +12,7 @@ blog/index.html   blog listing
 blog/*.html       individual posts (copy an existing post as a template)
 css/style.css     styles
 js/main.js        translations (EN/BHS), geo-IP language detection, interactions
+js/tally-embed.js loads the Tally form iframe on ugc.html
 assets/           logo.svg, logo-white.svg, favicon.svg
 assets/clients/   client brand logos (shown in the marquee under the hero)
 robots.txt        crawler rules + sitemap pointer
@@ -86,6 +87,41 @@ docs/             design spec
    Add it alongside any existing TXT records rather than replacing them, or you
    will break SPF. The two methods issue different tokens, so a token copied
    from the DNS screen will not verify via the meta tag, and vice versa.
+
+## Content-Security-Policy
+
+Every page carries the same CSP in a `<meta http-equiv>` tag, high in the `<head>`
+— one shared list, because four drifting ones break silently. Things to know
+before editing:
+
+- **Anything above the tag is not covered.** Keep it directly under the viewport
+  meta, ahead of every `<link>`, `<script>` and `<img>`.
+- **No inline `<script>` or `style="…"` anywhere.** The policy allows neither, so
+  new inline code is dropped by the browser without touching the page's HTML.
+  That is why the Tally loader lives in `js/tally-embed.js` and the handful of
+  old inline styles moved into the utilities block at the end of `css/style.css`.
+- **A new third-party origin must be added to the policy** or its requests fail.
+  Currently allowed: Google Fonts, googletagmanager, connect.facebook.net,
+  fast.wistia.net, tally.so, ipapi.co, google-analytics.
+- **`form-action 'self'` will block the newsletter form** if `NEWSLETTER_ENDPOINT`
+  in `js/main.js` is ever pointed at an external provider (Mailchimp, Brevo…).
+  Add that provider's origin to `form-action` at the same time.
+- **`frame-ancestors` cannot be set from a meta tag**, so there is no clickjacking
+  protection. That needs a real HTTP header, which GitHub Pages cannot send —
+  it would take a proxy such as Cloudflare in front of the site.
+
+## Images
+
+Photographic and screenshot assets are WebP. `assets/og.png` is deliberately
+**not** — social scrapers handle WebP poorly — and neither are the favicons.
+Every `<img>` carries `width` and `height` (intrinsic pixel size, with CSS doing
+the actual sizing) so nothing shifts while images load; keep that up on new
+markup. The creative tiles are built in JS, where the sizes live on the
+`CREATIVES` entries in `js/main.js`.
+
+When you change `css/style.css` or `js/main.js`, bump the `?v=` query on every
+page that links them. Returning visitors otherwise get new HTML against a cached
+old stylesheet, which is how layouts break after a deploy.
 
 ## Notes
 

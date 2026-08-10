@@ -1070,3 +1070,17 @@ a { color: inherit; text-decoration: none; }
   }
   .badges img { height: 52px; }
 }
+
+/* ---------------------------------------------------------------- utilities */
+/* These carry what used to be inline style attributes, so every page can run
+   under a Content-Security-Policy that does not allow inline styles. */
+.ugc-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5.4rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  margin-bottom: 28px;
+}
+.footer-bottom.is-flush-top { padding-top: 0; }
+.ugc-grid.is-flush-bottom { padding-bottom: 0; }
+.form-card.is-narrow { max-width: 760px; margin: 0 auto; }

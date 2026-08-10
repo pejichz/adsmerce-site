@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- One policy shared by every page: a single list is far less likely to
+     silently break than four drifting ones. Origins in use: Google Fonts,
+     gtag.js, Wistia (video), Tally (UGC form), ipapi.co (language). Must stay
+     above the first resource tag — anything before it is not covered.
+     frame-ancestors cannot be set from a meta tag, so clickjacking defence
+     would need a real HTTP header, which GitHub Pages cannot send. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-src https://fast.wistia.net https://tally.so; script-src 'self' https://www.googletagmanager.com https://connect.facebook.net https://tally.so; connect-src 'self' https://ipapi.co https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com; img-src 'self' data: https://*.google-analytics.com https://www.facebook.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Politika privatnosti · AdsMerce</title>
 <meta name="description" content="Kako AdsMerce postupa s tvojim podacima: šta prikupljamo, zašto, koje eksterne servise koristimo i koja su tvoja GDPR prava.">
 <link rel="canonical" href="https://adsmerce.com/privacy.html">
@@ -13,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="sk.skip">Preskoči na sadržaj</a>
@@ -21,7 +29,7 @@
 <header class="nav" id="top">
   <div class="container nav-inner">
     <a href="index.html" class="nav-logo" aria-label="AdsMerce home">
-      <img src="assets/logo.svg" alt="adsmerce." height="20">
+      <img src="assets/logo.svg" alt="adsmerce." width="107" height="20">
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="index.html#services" data-i18n="nav.services">Usluge</a>
@@ -79,13 +87,13 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="footer-bottom" style="padding-top:0">
+    <div class="footer-bottom is-flush-top">
       <span>© 2026 AdsMerce. <span data-i18n="ft.rights">Sva prava zadržana.</span></span>
       <a href="index.html">adsmerce.com</a>
     </div>
   </div>
 </footer>
 
-<script src="js/main.js?v=5"></script>
+<script src="js/main.js?v=6"></script>
 </body>
 </html>

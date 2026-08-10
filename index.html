@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- One policy shared by every page: a single list is far less likely to
+     silently break than four drifting ones. Origins in use: Google Fonts,
+     gtag.js, Wistia (video), Tally (UGC form), ipapi.co (language). Must stay
+     above the first resource tag — anything before it is not covered.
+     frame-ancestors cannot be set from a meta tag, so clickjacking defence
+     would need a real HTTP header, which GitHub Pages cannot send. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-src https://fast.wistia.net https://tally.so; script-src 'self' https://www.googletagmanager.com https://connect.facebook.net https://tally.so; connect-src 'self' https://ipapi.co https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com; img-src 'self' data: https://*.google-analytics.com https://www.facebook.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>AdsMerce · Performance marketing za e-commerce brendove</title>
 <meta name="description" content="Performance marketing agencija za e-commerce. €50M+ oglasnog budžeta na Meti, 20+ evropskih brendova. Meta, Google i TikTok oglasi, kreative, CRO i AI automatizacija.">
 <link rel="canonical" href="https://adsmerce.com/">
@@ -38,10 +46,97 @@
         "https://www.linkedin.com/company/adsmerce",
         "https://www.instagram.com/adsmerce"
       ],
-      "knowsAbout": ["Meta Ads", "Facebook Ads", "Instagram Ads", "Google Ads", "E-commerce growth", "Conversion rate optimization", "UGC creative production", "Performance marketing"]
+      "knowsAbout": ["Meta Ads", "Facebook Ads", "Instagram Ads", "Google Ads", "E-commerce growth", "Conversion rate optimization", "UGC creative production", "Performance marketing"],
+      "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Usluge",
+            "itemListElement": [
+                  {
+                        "@type": "Offer",
+                        "itemOffered": {
+                              "@type": "Service",
+                              "name": "Performance marketing",
+                              "description": "Meta Ads su u fokusu našeg rada, dok Google i TikTok uključujemo tamo gdje mogu donijeti dodatni profitabilan rast. Planiramo budžete, postavljamo jasnu strukturu kampanja i optimizujemo prema prodaji i profitu.",
+                              "serviceType": "Performance marketing",
+                              "provider": {
+                                    "@id": "https://adsmerce.com/#org"
+                              },
+                              "areaServed": {
+                                    "@type": "Place",
+                                    "name": "Evropa"
+                              }
+                        }
+                  },
+                  {
+                        "@type": "Offer",
+                        "itemOffered": {
+                              "@type": "Service",
+                              "name": "Izrada kreativa",
+                              "description": "Razvijamo kreativne koncepte i produciramo UGC videe, product demo oglase, statične vizuale i druge formate. Svaku kreativu razvijamo kao strukturisan test, sa jasnom hipotezom, ciljem i mjerljivim rezultatom.",
+                              "serviceType": "Izrada kreativa",
+                              "provider": {
+                                    "@id": "https://adsmerce.com/#org"
+                              },
+                              "areaServed": {
+                                    "@type": "Place",
+                                    "name": "Evropa"
+                              }
+                        }
+                  },
+                  {
+                        "@type": "Offer",
+                        "itemOffered": {
+                              "@type": "Service",
+                              "name": "Landing stranice i CRO",
+                              "description": "Analiziramo put od klika do kupovine. Unapređujemo i testiramo ponudu, stranice proizvoda, elemente povjerenja i CTA elemente.",
+                              "serviceType": "Landing stranice i CRO",
+                              "provider": {
+                                    "@id": "https://adsmerce.com/#org"
+                              },
+                              "areaServed": {
+                                    "@type": "Place",
+                                    "name": "Evropa"
+                              }
+                        }
+                  },
+                  {
+                        "@type": "Offer",
+                        "itemOffered": {
+                              "@type": "Service",
+                              "name": "Podaci, AI i automatizacija",
+                              "description": "Razvijamo dashboarde i alate za izvještavanje, praćenje zaliha i predikciju buduće potražnje. AI i automatizaciju uvodimo tamo gdje ubrzavaju analizu i poboljšavaju odluke.",
+                              "serviceType": "Podaci, AI i automatizacija",
+                              "provider": {
+                                    "@id": "https://adsmerce.com/#org"
+                              },
+                              "areaServed": {
+                                    "@type": "Place",
+                                    "name": "Evropa"
+                              }
+                        }
+                  },
+                  {
+                        "@type": "Offer",
+                        "itemOffered": {
+                              "@type": "Service",
+                              "name": "Strategija rasta i e-commerce operacije",
+                              "description": "Radimo na ponudi, cijenama, prosječnoj vrijednosti narudžbe, LTV-u, zadržavanju kupaca te planiranju zaliha i nabavke na osnovu prodajnih podataka.",
+                              "serviceType": "Strategija rasta i e-commerce operacije",
+                              "provider": {
+                                    "@id": "https://adsmerce.com/#org"
+                              },
+                              "areaServed": {
+                                    "@type": "Place",
+                                    "name": "Evropa"
+                              }
+                        }
+                  }
+            ]
+      }
     },
     {
       "@type": "WebSite",
+      "@id": "https://adsmerce.com/#website",
       "url": "https://adsmerce.com/",
       "name": "AdsMerce",
       "publisher": { "@id": "https://adsmerce.com/#org" },
@@ -65,7 +160,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=6">
 </head>
 <body>
 <div id="top"></div>
@@ -74,7 +169,7 @@
 <header class="nav">
   <div class="container nav-inner">
     <a href="#top" class="nav-logo" aria-label="AdsMerce home">
-      <img src="assets/logo.svg" alt="adsmerce." height="20">
+      <img src="assets/logo.svg" alt="adsmerce." width="107" height="20">
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="#services" data-i18n="nav.services">Usluge</a>
@@ -127,32 +222,32 @@
     </div>
     <div class="clients-marquee reveal">
       <div class="clients-track">
-        <img src="assets/clients/sofianno.png" alt="Sofianno">
-        <img src="assets/clients/loropiron.png" alt="Loro Piron">
-        <img src="assets/clients/alozzi.png" alt="Alozzi">
-        <img src="assets/clients/lililama.png" alt="Lililama">
-        <img src="assets/clients/newfelle.png" alt="Newfelle">
-        <img src="assets/clients/yvesmanon.png" alt="Yves Manon">
-        <img src="assets/clients/kylieberry.png" alt="Kylieberry">
-        <img src="assets/clients/gymesis.png" alt="Gymesis">
-        <img src="assets/clients/jovanotto.png" alt="Jovanotto">
-        <img src="assets/clients/lalux.png" alt="Lalux">
-        <img src="assets/clients/dokishop.png" alt="Dokishop">
-        <img src="assets/clients/pikaoshop.png" alt="Pikaoshop">
-        <img src="assets/clients/cosmicying.png" alt="Cosmicying">
-        <img src="assets/clients/sofianno.png" alt="" aria-hidden="true">
-        <img src="assets/clients/loropiron.png" alt="" aria-hidden="true">
-        <img src="assets/clients/alozzi.png" alt="" aria-hidden="true">
-        <img src="assets/clients/lililama.png" alt="" aria-hidden="true">
-        <img src="assets/clients/newfelle.png" alt="" aria-hidden="true">
-        <img src="assets/clients/yvesmanon.png" alt="" aria-hidden="true">
-        <img src="assets/clients/kylieberry.png" alt="" aria-hidden="true">
-        <img src="assets/clients/gymesis.png" alt="" aria-hidden="true">
-        <img src="assets/clients/jovanotto.png" alt="" aria-hidden="true">
-        <img src="assets/clients/lalux.png" alt="" aria-hidden="true">
-        <img src="assets/clients/dokishop.png" alt="" aria-hidden="true">
-        <img src="assets/clients/pikaoshop.png" alt="" aria-hidden="true">
-        <img src="assets/clients/cosmicying.png" alt="" aria-hidden="true">
+        <img src="assets/clients/sofianno.webp" width="512" height="128" alt="Sofianno">
+        <img src="assets/clients/loropiron.webp" width="512" height="128" alt="Loro Piron">
+        <img src="assets/clients/alozzi.webp" width="512" height="128" alt="Alozzi">
+        <img src="assets/clients/lililama.webp" width="512" height="128" alt="Lililama">
+        <img src="assets/clients/newfelle.webp" width="512" height="128" alt="Newfelle">
+        <img src="assets/clients/yvesmanon.webp" width="512" height="128" alt="Yves Manon">
+        <img src="assets/clients/kylieberry.webp" width="512" height="128" alt="Kylieberry">
+        <img src="assets/clients/gymesis.webp" width="512" height="128" alt="Gymesis">
+        <img src="assets/clients/jovanotto.webp" width="512" height="128" alt="Jovanotto">
+        <img src="assets/clients/lalux.webp" width="512" height="128" alt="Lalux">
+        <img src="assets/clients/dokishop.webp" width="512" height="128" alt="Dokishop">
+        <img src="assets/clients/pikaoshop.webp" width="512" height="128" alt="Pikaoshop">
+        <img src="assets/clients/cosmicying.webp" width="512" height="128" alt="Cosmicying">
+        <img src="assets/clients/sofianno.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/loropiron.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/alozzi.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/lililama.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/newfelle.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/yvesmanon.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/kylieberry.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/gymesis.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/jovanotto.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/lalux.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/dokishop.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/pikaoshop.webp" width="512" height="128" alt="" aria-hidden="true">
+        <img src="assets/clients/cosmicying.webp" width="512" height="128" alt="" aria-hidden="true">
       </div>
     </div>
   </section>
@@ -231,29 +326,29 @@
       <div class="shots">
         <figure class="shot-card reveal">
           <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-          <a class="shot-img" href="assets/results/overview.jpg" target="_blank" rel="noopener">
-            <img src="assets/results/overview.jpg" width="1846" height="399" loading="lazy" alt="Meta Ads Manager: blended results across 70+ ad accounts">
+          <a class="shot-img" href="assets/results/overview.webp" target="_blank" rel="noopener">
+            <img src="assets/results/overview.webp" width="1846" height="399" loading="lazy" alt="Meta Ads Manager: blended results across 70+ ad accounts">
           </a>
           <figcaption data-i18n="res.cap1">Portfolio aktivnih e-commerce računa · posljednjih 30 dana</figcaption>
         </figure>
         <figure class="shot-card reveal">
           <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-          <a class="shot-img" href="assets/results/dokishop.jpg" target="_blank" rel="noopener">
-            <img src="assets/results/dokishop.jpg" width="1805" height="761" loading="lazy" alt="Meta Ads Manager: DokiShop campaign performance">
+          <a class="shot-img" href="assets/results/dokishop.webp" target="_blank" rel="noopener">
+            <img src="assets/results/dokishop.webp" width="1805" height="761" loading="lazy" alt="Meta Ads Manager: DokiShop campaign performance">
           </a>
           <figcaption data-i18n="res.cap2">DokiShop: skaliranje na 15+ evropskih tržišta · cijeli period saradnje</figcaption>
         </figure>
         <figure class="shot-card reveal">
           <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-          <a class="shot-img" href="assets/results/werkhus.jpg" target="_blank" rel="noopener">
-            <img src="assets/results/werkhus.jpg" width="1807" height="721" loading="lazy" alt="Meta Ads Manager: Werkhus campaign performance">
+          <a class="shot-img" href="assets/results/werkhus.webp" target="_blank" rel="noopener">
+            <img src="assets/results/werkhus.webp" width="1807" height="721" loading="lazy" alt="Meta Ads Manager: Werkhus campaign performance">
           </a>
           <figcaption data-i18n="res.cap3">Werkhus: razvoj i skaliranje brenda od nule · rezultati kampanja za cijeli period saradnje</figcaption>
         </figure>
         <figure class="shot-card reveal">
           <div class="shot-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-          <a class="shot-img" href="assets/results/providio.jpg" target="_blank" rel="noopener">
-            <img src="assets/results/providio.jpg" width="1807" height="759" loading="lazy" alt="Meta Ads Manager: active campaigns, last 30 days">
+          <a class="shot-img" href="assets/results/providio.webp" target="_blank" rel="noopener">
+            <img src="assets/results/providio.webp" width="1807" height="759" loading="lazy" alt="Meta Ads Manager: active campaigns, last 30 days">
           </a>
           <figcaption data-i18n="res.cap4">Providio d.o.o. · aktivne kampanje · posljednjih 30 dana</figcaption>
         </figure>
@@ -310,10 +405,10 @@
           </li>
         </ul>
         <div class="badges reveal d2">
-          <img src="assets/badges/meta-media-buying.webp" alt="Meta Certified Media Buying Professional badge" loading="lazy">
-          <img src="assets/badges/meta-ai-performance.webp" alt="Meta Certified AI and Performance Marketing Specialist badge" loading="lazy">
-          <img src="assets/badges/google-ads-certified.webp" alt="Google Ads Certified badge" loading="lazy">
-          <img src="assets/badges/tiktok-media-buying.webp" alt="TikTok Certified Media Buying Professional badge" loading="lazy">
+          <img src="assets/badges/meta-media-buying.webp" width="500" height="500" alt="Meta Certified Media Buying Professional badge" loading="lazy">
+          <img src="assets/badges/meta-ai-performance.webp" width="500" height="500" alt="Meta Certified AI and Performance Marketing Specialist badge" loading="lazy">
+          <img src="assets/badges/google-ads-certified.webp" width="500" height="500" alt="Google Ads Certified badge" loading="lazy">
+          <img src="assets/badges/tiktok-media-buying.webp" width="500" height="500" alt="TikTok Certified Media Buying Professional badge" loading="lazy">
         </div>
       </div>
       <aside class="chart-card reveal d1">
@@ -346,7 +441,7 @@
         <p data-i18n="founder.body1">AdsMerce vodi Zoran Pejić, performance marketer sa više od osam godina iskustva u skaliranju e-commerce brendova na evropskim tržištima.</p>
         <p data-i18n="founder.body2">Strategiju i ključne odluke ne prebacujemo na juniore. Po potrebi uključujemo provjerene kreatore, dizajnere i tehničke saradnike, dok performance i smjer projekta ostaju direktno vođeni.</p>
         <div class="founder-sign">
-          <img class="founder-avatar" src="assets/founder/zoran-pejic.jpg" alt="Zoran Pejić" width="56" height="56" loading="lazy">
+          <img class="founder-avatar" src="assets/founder/zoran-pejic.webp" alt="Zoran Pejić" width="56" height="56" loading="lazy">
           <div class="founder-sign-meta">
             <strong data-i18n="founder.name">Zoran Pejić</strong>
             <span data-i18n="founder.role">Osnivač</span>
@@ -471,7 +566,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <img src="assets/logo-white.svg" alt="adsmerce." height="22">
+        <img src="assets/logo-white.svg" alt="adsmerce." width="118" height="22">
         <p data-i18n="ft.blurb">Performance marketing agencija specijalizovana za e-commerce rast kroz Meta, Google i TikTok Ads, kreative, CRO i AI automatizaciju.</p>
       </div>
       <nav aria-label="Footer services">
@@ -501,6 +596,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=5"></script>
+<script src="js/main.js?v=6"></script>
 </body>
 </html>

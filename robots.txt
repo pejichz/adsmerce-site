@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Plain-text summary of the site for AI crawlers and assistants:
+# https://adsmerce.com/llms.txt
+
 Sitemap: https://adsmerce.com/sitemap.xml

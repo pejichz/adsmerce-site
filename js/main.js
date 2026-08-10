@@ -560,11 +560,13 @@
        { labelKey: "…" } — placeholder tile ("sample coming soon").
      To add a Wistia video: open the share link, the player embeds from
      fast.wistia.net/embed/iframe/<hashedId>. */
+  /* w/h are the files' intrinsic pixel sizes — set on the <img> so the tile
+     keeps its shape before the image arrives. */
   var CREATIVES = [
-    { type: "wistia", id: "ykip63i1al", poster: "assets/creative/ugc-video.jpg", labelKey: "work.f1" },
-    { type: "wistia", id: "evrykh8n27", poster: "assets/creative/product-demo.jpg", labelKey: "work.f2" },
-    { type: "wistia", id: "txxa4u95sx", poster: "assets/creative/ai-video.jpg", labelKey: "work.f3" },
-    { type: "image", src: "assets/creative/static-carousel.png", labelKey: "work.f4" }
+    { type: "wistia", id: "ykip63i1al", poster: "assets/creative/ugc-video.webp", w: 540, h: 960, labelKey: "work.f1" },
+    { type: "wistia", id: "evrykh8n27", poster: "assets/creative/product-demo.webp", w: 540, h: 960, labelKey: "work.f2" },
+    { type: "wistia", id: "txxa4u95sx", poster: "assets/creative/ai-video.webp", w: 540, h: 960, labelKey: "work.f3" },
+    { type: "image", src: "assets/creative/static-carousel.webp", w: 360, h: 640, labelKey: "work.f4" }
   ];
 
   function playWistia(tile, id, label) {
@@ -599,6 +601,8 @@
         poster.src = item.poster;
         poster.alt = label;
         poster.loading = "lazy";
+        poster.width = item.w;
+        poster.height = item.h;
         var play = document.createElement("span");
         play.className = "play";
         play.innerHTML = '<svg width="18" height="18" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M5 3.5v9l7.5-4.5L5 3.5Z" fill="currentColor"/></svg>';
@@ -617,6 +621,8 @@
         img.src = item.src;
         img.alt = label;
         img.loading = "lazy";
+        img.width = item.w;
+        img.height = item.h;
         tile.style.cursor = "default";
         tile.appendChild(img);
       } else {
@@ -657,6 +663,8 @@
   /* When you pick a provider (Mailchimp, Brevo, Buttondown…), paste its
      form action URL here and the form will POST to it directly. While it
      is empty, submissions fall back to a pre-filled email. */
+  /* Pointing this at an external provider also means adding that provider's
+     origin to form-action in the CSP meta tag, or the browser blocks the post. */
   var NEWSLETTER_ENDPOINT = "";
 
   var newsForm = document.getElementById("newsletterForm");
