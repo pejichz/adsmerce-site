@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Prijedlog: stranica za prikupljanje video iskustava · Srijemuš La Vita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#15402A;
+  --forest-2:#0D2A1B;
+  --forest-3:#1E5637;
+  --gold:#B8912F;
+  --gold-lt:#DCC079;
+  --gold-tint:#F7EFDA;
+  --cream:#F6F1E5;
+  --cream-2:#FBF8F0;
+  --card:#FFFFFF;
+  --ink:#22201A;
+  --ink-soft:#5B564A;
+  --ink-faint:#8D8676;
+  --line:#E4DCC8;
+  --rust:#8F3A2C;
+  --r:10px;
+  --serif:"Cormorant Garamond","EB Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.7;
+  color:var(--ink);
+  background:var(--cream);
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%}
+a{color:inherit}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.narrow{max-width:780px;margin:0 auto}
+
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.14;letter-spacing:-.005em}
+h1{font-size:clamp(38px,6.6vw,64px)}
+h2{font-size:clamp(30px,4.8vw,46px)}
+h3{font-size:22px;font-weight:600;letter-spacing:0}
+h1 em,h2 em{font-style:italic;color:var(--gold);font-weight:400}
+
+section{padding:76px 0}
+.sec-cream{background:var(--cream-2)}
+.sec-dark{background:var(--forest);color:#EDE9DC}
+.sec-dark h2,.sec-dark h3{color:#fff}
+.sec-dark h2 em{color:var(--gold-lt)}
+
+.eyebrow{
+  font-family:var(--sans);font-size:11.5px;font-weight:600;letter-spacing:.24em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:16px;
+}
+.sec-dark .eyebrow{color:var(--gold-lt)}
+.sec-head{text-align:center;max-width:730px;margin:0 auto 48px}
+.sec-head p{color:var(--ink-soft);margin-top:16px;font-size:18px}
+.sec-dark .sec-head p{color:#C2CFBA}
+.sec-head.left{text-align:left;margin-left:0}
+.lead{font-size:19.5px;color:var(--ink-soft);max-width:58ch}
+
+/* ---------- mockup banner ---------- */
+.mockbar{
+  background:#1A1710;color:#E4D9BE;font-size:13px;line-height:1.5;
+  padding:9px 20px;text-align:center;
+}
+.mockbar b{color:var(--gold-lt);letter-spacing:.16em;text-transform:uppercase;font-size:11px}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:60;background:rgba(246,241,229,.95);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--forest);letter-spacing:.01em}
+.brand small{display:block;font-family:var(--sans);font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);line-height:1;margin-top:3px}
+.nav-links{display:none;gap:30px;font-size:14px;font-weight:500;letter-spacing:.04em;color:var(--ink-soft);text-transform:uppercase}
+.nav-links a{text-decoration:none}
+.nav-links a:hover{color:var(--gold)}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:17px 30px;border-radius:6px;font-family:var(--sans);
+  font-size:15.5px;font-weight:600;line-height:1.2;text-decoration:none;letter-spacing:.02em;
+  border:1.5px solid transparent;cursor:pointer;text-align:center;
+  transition:background .2s,border-color .2s,color .2s,transform .12s;
+}
+.btn:active{transform:scale(.985)}
+.btn-primary{background:var(--forest);color:#fff}
+.btn-primary:hover{background:var(--forest-2)}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:#9E7B23}
+.btn-ghost{border-color:var(--forest);color:var(--forest);background:transparent}
+.btn-ghost:hover{background:var(--forest);color:#fff}
+.btn-outline-lt{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+.btn-outline-lt:hover{background:#fff;color:var(--forest)}
+.btn-sm{padding:11px 20px;font-size:13.5px}
+.btn-block{display:flex;width:100%}
+.btn-row{display:flex;flex-direction:column;gap:12px;margin-top:32px}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  padding:84px 0 76px;
+  background:
+    radial-gradient(120% 90% at 78% 15%, rgba(60,120,70,.42) 0%, rgba(13,42,27,0) 62%),
+    linear-gradient(168deg,#1C4A30 0%,#123722 46%,#0A2416 100%);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(8,28,17,.72) 0%,rgba(8,28,17,.34) 55%,rgba(8,28,17,.1) 100%);
+}
+.hero-in{position:relative;z-index:3;max-width:740px}
+.hero .eyebrow{color:var(--gold-lt)}
+.hero h1{color:#fff;margin-bottom:22px}
+.hero h1 em{color:var(--gold-lt)}
+.hero p{color:#D4DECD;font-size:19.5px;max-width:56ch}
+.hero p+p{margin-top:14px}
+.hero strong{color:#fff;font-weight:600}
+.hero-note{margin-top:22px;font-size:15px;color:#A8BCA0;display:flex;align-items:flex-start;gap:9px}
+.leafdeco{position:absolute;pointer-events:none;color:#8FBF7A;opacity:.13;z-index:1}
+.leafdeco.a{top:-70px;right:2%;width:280px;transform:rotate(16deg)}
+.leafdeco.b{bottom:-120px;right:26%;width:220px;transform:rotate(-28deg);opacity:.08}
+
+/* ---------- fact strip ---------- */
+.facts{background:var(--forest-2);color:#E7EEE1;padding:0}
+.facts-in{display:grid;grid-template-columns:1fr;gap:0}
+.fact{padding:26px 10px;text-align:center;border-top:1px solid rgba(255,255,255,.09)}
+.fact:first-child{border-top:0}
+.fact b{display:block;font-family:var(--serif);font-size:34px;font-weight:500;color:var(--gold-lt);line-height:1.1}
+.fact span{font-size:14px;color:#A9BFA1;letter-spacing:.02em}
+
+/* ---------- pledge ---------- */
+.pledge{
+  background:var(--card);border:1px solid var(--line);border-top:4px solid var(--gold);
+  border-radius:var(--r);padding:36px 32px;max-width:820px;margin:0 auto;text-align:center;
+  box-shadow:0 20px 44px -34px rgba(21,64,42,.5);
+}
+.pledge .seal{
+  width:56px;height:56px;margin:0 auto 20px;border-radius:50%;
+  background:var(--gold-tint);color:var(--gold);display:grid;place-items:center;
+}
+.pledge h3{font-family:var(--serif);font-size:clamp(26px,3.6vw,34px);font-weight:500;margin-bottom:16px}
+.pledge h3 em{font-style:italic;color:var(--gold)}
+.pledge p{color:var(--ink-soft);font-size:18px;max-width:60ch;margin:0 auto 14px}
+.pledge .sig{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--forest);margin-top:22px}
+
+/* ---------- cards ---------- */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px}
+.grid-2{display:grid;gap:22px}
+
+/* gift */
+.gift{display:grid;gap:26px;align-items:start}
+.gift-box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px}
+.gift-list{list-style:none;margin:22px 0 0}
+.gift-list li{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-top:1px solid var(--line)}
+.gift-list li:first-child{border-top:0;padding-top:0}
+.gift-list b{display:block;font-weight:600;font-size:16.5px}
+.gift-list em{display:block;font-style:normal;font-size:14.5px;color:var(--ink-soft);line-height:1.55}
+.gift-val{
+  margin-top:24px;background:var(--gold-tint);border:1px solid #E8D5A4;border-radius:8px;
+  padding:16px 18px;font-size:15.5px;color:#6B5417;line-height:1.6;
+}
+.gift-val b{color:var(--gold);font-size:17px}
+
+/* rules box */
+.rulebox{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card)}
+.rulebox-h{background:var(--forest);color:#fff;padding:24px 28px}
+.rulebox-h h3{color:#fff;font-family:var(--serif);font-size:25px;font-weight:500}
+.rulebox-h p{color:#AEC5A4;font-size:15px;margin-top:5px}
+.rulebox-b{padding:26px 28px}
+.check{list-style:none;display:grid;gap:15px}
+.check li{display:flex;gap:13px;align-items:flex-start;font-size:16.5px;line-height:1.55}
+.ic{flex:0 0 22px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;margin-top:3px}
+.ic-y{background:#E4EEDF;color:var(--forest-3)}
+.ic-n{background:#F6E6E2;color:var(--rust)}
+.rule-foot{
+  margin-top:24px;padding:18px 20px;background:var(--gold-tint);border-radius:8px;
+  font-size:17px;font-weight:600;color:#6B5417;line-height:1.55;text-align:center;
+}
+
+/* questions */
+.q{display:grid;gap:14px;max-width:880px;margin:0 auto}
+.q-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:24px 26px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;
+}
+.q-num{font-family:var(--serif);font-size:40px;font-weight:500;line-height:.95;color:var(--line);min-width:36px}
+.q-item h3{margin-bottom:7px;font-size:20px}
+.q-item p{font-size:16px;color:var(--ink-soft);line-height:1.6}
+.q-item.key{border-color:#E3CD96;background:linear-gradient(180deg,var(--gold-tint) 0%,#fff 55%)}
+.q-item.key .q-num{color:var(--gold)}
+.q-tag{
+  display:inline-block;background:var(--gold);color:#fff;font-size:10.5px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:10px;
+}
+.q-item.bonus{border-style:dashed;background:transparent}
+
+/* do / dont */
+.dd{display:grid;gap:22px}
+.dd-col{border-radius:var(--r);padding:28px;border:1px solid var(--line);background:var(--card)}
+.dd-col.yes{border-color:#CADCC0}
+.dd-col.no{border-color:#EBD3CD}
+.dd-h{display:flex;align-items:center;gap:11px;margin-bottom:20px}
+.dd-h h3{font-size:20px}
+.dd-col ul{list-style:none;display:grid;gap:13px}
+.dd-col li{display:flex;gap:12px;align-items:flex-start;font-size:16px;line-height:1.55}
+.phone-fig{display:flex;justify-content:center;margin-bottom:22px}
+
+/* send options */
+.send{display:grid;gap:14px;max-width:820px;margin:0 auto}
+.send-opt{
+  display:flex;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--r);padding:22px 24px;text-decoration:none;transition:border-color .2s,transform .12s;
+}
+.send-opt:hover{border-color:var(--gold);transform:translateY(-1px)}
+.send-ic{flex:0 0 46px;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#E9F0E4;color:var(--forest-3)}
+.send-opt b{display:block;font-size:17px;font-weight:600}
+.send-opt em{display:block;font-style:normal;font-size:14.5px;color:var(--ink-soft);line-height:1.5}
+
+/* form */
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px}
+.field{margin-bottom:19px}
+.field label{display:block;font-weight:600;font-size:15.5px;margin-bottom:7px}
+.field .hint{font-weight:400;color:var(--ink-faint);font-size:14px}
+.field input,.field textarea{
+  width:100%;font-family:var(--sans);font-size:16.5px;padding:14px 15px;
+  border:1px solid var(--line);border-radius:7px;background:var(--cream-2);color:var(--ink);
+}
+.field input:focus,.field textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+.drop{border:2px dashed #C9D8BF;background:#F1F6EE;border-radius:8px;padding:32px 20px;text-align:center;color:var(--forest-3)}
+.drop b{display:block;font-size:17px;margin:10px 0 4px}
+.drop span{font-size:14.5px;color:var(--ink-soft)}
+.consents{display:grid;gap:15px;margin:26px 0 8px;padding-top:24px;border-top:1px solid var(--line)}
+.cons{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start;font-size:15.5px;line-height:1.55}
+.cons input{width:21px;height:21px;margin-top:2px;accent-color:var(--forest)}
+.cons .opt{color:var(--ink-faint);font-size:13.5px;display:block}
+.form-foot{font-size:14px;color:var(--ink-faint);margin-top:18px;text-align:center;line-height:1.6}
+
+/* timeline */
+.tl{display:grid;margin-top:8px}
+.tl-item{display:grid;grid-template-columns:auto 1fr;gap:22px;padding-bottom:28px;position:relative}
+.tl-item:last-child{padding-bottom:0}
+.tl-dot{width:13px;height:13px;border-radius:50%;background:var(--gold);margin-top:9px;box-shadow:0 0 0 4px var(--gold-tint);position:relative;z-index:2;flex:0 0 13px}
+.tl-item:not(:last-child)::before{content:"";position:absolute;left:6px;top:24px;bottom:-2px;width:1px;background:var(--line)}
+.tl-item b{display:block;font-size:18px;font-weight:600;margin-top:2px}
+.tl-item p{color:var(--ink-soft);font-size:16px;line-height:1.6}
+.tl-when{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+
+/* faq — two column like the live site */
+.faq-grid{display:grid;gap:32px;align-items:start}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin-bottom:11px;overflow:hidden}
+.faq summary{padding:19px 22px;font-weight:600;font-size:16.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--serif);font-size:26px;color:var(--gold);line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 22px 20px;color:var(--ink-soft);font-size:16px;line-height:1.65}
+
+/* fine print */
+.fine{font-size:15.5px;color:var(--ink-soft);line-height:1.75}
+.fine h3{font-size:17px;margin:26px 0 9px;color:var(--ink)}
+.fine ul{margin-left:20px;display:grid;gap:8px}
+.disclaimer{margin-top:28px;background:var(--gold-tint);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:20px 22px;font-size:15px;color:#645112;line-height:1.7}
+
+/* cta band */
+.band{background:var(--forest);color:#fff;text-align:center;padding:76px 0;position:relative;overflow:hidden}
+.band h2{color:#fff;margin-bottom:16px}
+.band h2 em{color:var(--gold-lt)}
+.band p{color:#BFD0B6;max-width:54ch;margin:0 auto 30px;font-size:18px}
+
+footer{background:var(--forest-2);color:#8FA487;padding:44px 0;font-size:14px;text-align:center;line-height:1.8}
+footer a{color:#BCCBB3}
+
+@media (min-width:780px){
+  .nav-links{display:flex}
+  .grid-2{grid-template-columns:1fr 1fr}
+  .dd{grid-template-columns:1fr 1fr}
+  .facts-in{grid-template-columns:repeat(3,1fr)}
+  .fact{border-top:0;border-left:1px solid rgba(255,255,255,.09)}
+  .fact:first-child{border-left:0}
+  .btn-row{flex-direction:row}
+  .gift{grid-template-columns:1fr 1fr;gap:34px}
+  .form-card{padding:38px 36px}
+  .faq-grid{grid-template-columns:.8fr 1.2fr;gap:48px}
+  .faq-grid .sec-head{text-align:left;margin:0}
+  section{padding:96px 0}
+}
+
+@media print{
+  body{background:#fff;font-size:13px}
+  .nav,.mockbar,footer,.band{display:none!important}
+  main>section{display:none!important}
+  main>#pitanja{display:block!important;padding:0}
+  .q-item{break-inside:avoid}
+  .noprint{display:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="mockbar">
+  <b>Prijedlog dizajna</b> &nbsp;·&nbsp; Sve cifre, rokovi i kontakti su primjeri i podložni dogovoru. Forma nije aktivna. &nbsp;·&nbsp; Priprema: AdsMerce
+</div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <div class="brand">
+      <svg width="24" height="24" viewBox="0 0 200 260" fill="currentColor" aria-hidden="true">
+        <path d="M100 258C58 208 34 128 68 42 84 6 95 0 100 0s16 6 32 42c34 86 10 166-32 216z"/>
+      </svg>
+      <div>Srijemuš La Vita<small>Vaše iskustvo</small></div>
+    </div>
+    <nav class="nav-links">
+      <a href="#poklon">Poklon</a>
+      <a href="#pitanja">Pitanja</a>
+      <a href="#snimanje">Snimanje</a>
+      <a href="#pravila">Pravila</a>
+    </nav>
+    <a href="#forma" class="btn btn-primary btn-sm">Pošalji video</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="pocetak">
+    <svg class="leafdeco a" viewBox="0 0 200 260" fill="currentColor" aria-hidden="true"><path d="M100 258C58 208 34 128 68 42 84 6 95 0 100 0s16 6 32 42c34 86 10 166-32 216z"/></svg>
+    <svg class="leafdeco b" viewBox="0 0 200 260" fill="currentColor" aria-hidden="true"><path d="M100 258C58 208 34 128 68 42 84 6 95 0 100 0s16 6 32 42c34 86 10 166-32 216z"/></svg>
+    <div class="wrap">
+      <div class="hero-in">
+        <p class="eyebrow">Poziv korisnicima Srijemuša La Vite</p>
+        <h1>Recite nam kako je zaista bilo &mdash; <em>i ako nije bilo nikako.</em></h1>
+        <p>Snimite kratak video telefonom i odgovorite na pet pitanja o tome kako ste koristili srijemuš i šta se kod vas promijenilo.</p>
+        <p>Ako je snimak kompletan i razgovijetan, šaljemo vam <strong>poklon paket naših proizvoda</strong> &mdash; bez obzira na to da li je vaše iskustvo dobro, mlako ili loše.</p>
+        <div class="btn-row">
+          <a href="#forma" class="btn btn-gold">Pošaljite svoj video</a>
+          <a href="#pitanja" class="btn btn-outline-lt">Prvo pogledajte pitanja</a>
+        </div>
+        <p class="hero-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" style="flex:0 0 18px;margin-top:4px"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Potrebno vam je 10 do 15 minuta i telefon. Ništa drugo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FACTS ============ -->
+  <section class="facts">
+    <div class="wrap facts-in">
+      <div class="fact"><b>5 pitanja</b><span>na koja odgovarate u snimku</span></div>
+      <div class="fact"><b>60&ndash;180 sek</b><span>koliko snimak treba da traje</span></div>
+      <div class="fact"><b>7 dana</b><span>i poklon je na vašoj adresi</span></div>
+    </div>
+  </section>
+
+  <!-- ============ PLEDGE ============ -->
+  <section class="sec-cream">
+    <div class="wrap">
+      <div class="pledge">
+        <div class="seal" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.4-3 8-7 9-4-1-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3>Ne plaćamo pohvale. <em>Plaćamo iskrenost.</em></h3>
+        <p>Poklon paket ne zavisi od toga <strong>šta</strong> ćete reći, nego samo od toga da li ste odgovorili na sva pitanja i da li se na snimku jasno vidite i čujete.</p>
+        <p>Ako srijemuš kod vas nije uradio ništa &mdash; recite to. Taj snimak nam vrijedi jednako i dobija isti poklon. Bez takvih snimaka ne znamo šta treba popraviti.</p>
+        <p class="sig">&mdash; Tim Srijemuš La Vita</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY ============ -->
+  <section>
+    <div class="wrap narrow">
+      <div class="sec-head">
+        <p class="eyebrow">Zašto ovo tražimo</p>
+        <h2>Reklame su pune savršenih priča. <em>Nama trebaju prave.</em></h2>
+      </div>
+      <p style="font-size:18.5px;color:var(--ink-soft);margin-bottom:20px">Srijemuš La Vita koristi više od 10.000 ljudi. Kod nekih je promjena bila velika, kod nekih mala, a kod nekih je izostala. Sve tri priče su istinite i sve tri nam trebaju.</p>
+      <p style="font-size:18.5px;color:var(--ink-soft);margin-bottom:20px">Zato ne pišemo scenarij i ne tražimo da nešto pohvalite. Postavljamo vam ista pitanja koja bi vam postavio komšija koji razmišlja da naruči &mdash; i molimo vas da odgovorite onako kako biste njemu odgovorili.</p>
+      <p style="font-size:18.5px;color:var(--ink-soft)">Kritika nam je jednako korisna: govori nam kome proizvod ne odgovara, gdje smo obećali previše i šta treba popraviti u uputstvu za korištenje.</p>
+    </div>
+  </section>
+
+  <!-- ============ GIFT ============ -->
+  <section class="sec-cream" id="poklon">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Šta dobijate</p>
+        <h2>Poklon paket <em>Srijemuš proizvoda</em>.</h2>
+        <p>Šaljemo ga na vašu adresu bez troška dostave, na području BiH, Hrvatske, Srbije i Crne Gore.</p>
+      </div>
+
+      <div class="gift">
+        <div class="gift-box">
+          <h3>U paketu je</h3>
+          <ul class="gift-list">
+            <li>
+              <span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span><b>Kapsule od liofiliziranog srijemuša</b><em>Pakovanje od 60 kapsula &mdash; dvomjesečna terapija</em></span>
+            </li>
+            <li>
+              <span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span><b>Mast od srijemuša, 100 ml</b><em>Za njegu nogu, vena i grčeva</em></span>
+            </li>
+            <li>
+              <span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span><b>Ulje od liofiliziranog srijemuša</b><em>Patentirani dermalni proizvod iz vaše linije</em></span>
+            </li>
+            <li>
+              <span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+              <span><b>Sprej za nos</b><em>Uz uputstvo za pravilno korištenje</em></span>
+            </li>
+          </ul>
+          <p class="gift-val">Ukupna vrijednost paketa: <b>preko 100 KM</b><br>Dostava besplatna. Ništa ne plaćate, ni pouzećem.</p>
+        </div>
+
+        <div class="rulebox">
+          <div class="rulebox-h">
+            <h3>Kada dobijate poklon</h3>
+            <p>Ovo su jedini uslovi. Nema drugih.</p>
+          </div>
+          <div class="rulebox-b">
+            <ul class="check">
+              <li>
+                <span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span>Koristili ste neki od naših proizvoda <strong>najmanje tri sedmice</strong></span>
+              </li>
+              <li>
+                <span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span>U snimku ste odgovorili na <strong>svih pet pitanja</strong></span>
+              </li>
+              <li>
+                <span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span>Vidi vas se i <strong>čuje razgovijetno</strong>, snimak traje bar 60 sekundi</span>
+              </li>
+              <li>
+                <span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span>Punoljetni ste i dali ste saglasnost za korištenje snimka</span>
+              </li>
+              <li>
+                <span class="ic ic-n" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></span>
+                <span><strong>Ne tražimo</strong> da proizvod pohvalite, ocijenite ili preporučite</span>
+              </li>
+              <li>
+                <span class="ic ic-n" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></span>
+                <span><strong>Ne tražimo</strong> lijep prostor, šminku, novi telefon ni glumu</span>
+              </li>
+            </ul>
+            <p class="rule-foot">Negativno iskustvo dobija potpuno isti poklon kao i pozitivno. To je cijela poenta.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUESTIONS ============ -->
+  <section id="pitanja">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Sadržaj snimka</p>
+        <h2>Pet pitanja. <em>Odgovorite redom.</em></h2>
+        <p>Ne morate ih učiti napamet i ne morate govoriti u jednom dahu. Možete pauzirati snimanje između pitanja ili poslati pet kraćih snimaka.</p>
+      </div>
+
+      <div class="q">
+        <article class="q-item">
+          <div class="q-num">1</div>
+          <div>
+            <h3>Predstavite se ukratko.</h3>
+            <p>Ime, grad i, ako želite, godine. Prezime ne morate reći &mdash; kasnije u formi birate koliko toga objavljujemo.</p>
+          </div>
+        </article>
+
+        <article class="q-item">
+          <div class="q-num">2</div>
+          <div>
+            <h3>Šta vas je navelo da probate srijemuš?</h3>
+            <p>Kakav problem ste imali, kako ste se osjećali prije toga i odakle ste čuli za nas.</p>
+          </div>
+        </article>
+
+        <article class="q-item">
+          <div class="q-num">3</div>
+          <div>
+            <h3>Kako ste ga koristili?</h3>
+            <p>Koji proizvod, koliko dnevno i koliko dugo. Slobodno recite i ako ste zaboravljali ili prekidali &mdash; i to nam je važna informacija.</p>
+          </div>
+        </article>
+
+        <article class="q-item key">
+          <div class="q-num">4</div>
+          <div>
+            <span class="q-tag">Najvažnije pitanje</span>
+            <h3>Šta se promijenilo &mdash; a šta nije?</h3>
+            <p>Recite oboje. I ono što je bilo bolje, i ono što je ostalo isto ili nije ispunilo vaša očekivanja. Ako promjene nije bilo, recite i to otvoreno.</p>
+          </div>
+        </article>
+
+        <article class="q-item key">
+          <div class="q-num">5</div>
+          <div>
+            <span class="q-tag">Najvažnije pitanje</span>
+            <h3>Kome biste ga preporučili, a kome ne biste?</h3>
+            <p>I šta biste rekli nekome ko upravo razmišlja da naruči, a nije siguran.</p>
+          </div>
+        </article>
+
+        <article class="q-item bonus">
+          <div class="q-num">+</div>
+          <div>
+            <h3>Bonus, ako imate volje: šta bismo mi trebali popraviti?</h3>
+            <p>Proizvod, pakovanje, uputstvo, dostava, komunikacija &mdash; bilo šta. Nije uslov za poklon.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="btn-row noprint" style="justify-content:center">
+        <button class="btn btn-ghost" onclick="window.print()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V2h12v7M6 18H4v-6h16v6h-2M8 14h8v8H8z"/></svg>
+          Odštampajte pitanja
+        </button>
+        <a href="#forma" class="btn btn-ghost">Pošaljite pitanja na svoj e-mail</a>
+      </div>
+      <p class="noprint" style="margin-top:16px;font-size:15px;color:var(--ink-faint);text-align:center">Savjet: otvorite ovu stranicu na računaru ili odštampajte pitanja, pa snimajte telefonom.</p>
+    </div>
+  </section>
+
+  <!-- ============ HOW TO RECORD ============ -->
+  <section class="sec-cream" id="snimanje">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Snimanje</p>
+        <h2>Kako da snimak <em>bude upotrebljiv</em>.</h2>
+        <p>Ne treba vam nikakva oprema. Treba nam samo da vas jasno vidimo i čujemo.</p>
+      </div>
+
+      <div class="dd">
+        <div class="dd-col yes">
+          <div class="phone-fig" aria-hidden="true">
+            <svg width="82" height="116" viewBox="0 0 86 120" fill="none">
+              <rect x="1.5" y="1.5" width="83" height="117" rx="11" fill="#F1F6EE" stroke="#4C8B3F" stroke-width="2.5"/>
+              <circle cx="43" cy="44" r="15" fill="#C7DCBA"/>
+              <path d="M20 100c0-14 10-24 23-24s23 10 23 24z" fill="#C7DCBA"/>
+              <path d="M76 20l8-7M78 33h9M76 46l8 7" stroke="#B8912F" stroke-width="2.6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="dd-h">
+            <span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <h3>Ovako da</h3>
+          </div>
+          <ul>
+            <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Držite telefon <strong>uspravno</strong> i naslonite ga na nešto</li>
+            <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Stanite <strong>okrenuti prema prozoru</strong>, da svjetlo pada na lice</li>
+            <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Snimajte u <strong>tihoj prostoriji</strong>, bez televizora u pozadini</li>
+            <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Lice neka bude u <strong>gornjoj polovini</strong> ekrana</li>
+            <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Govorite <strong>normalno, kao komšiji</strong> &mdash; greške su sasvim u redu</li>
+            <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Ako imate pakovanje pri ruci, <strong>pokažite ga</strong></li>
+          </ul>
+        </div>
+
+        <div class="dd-col no">
+          <div class="phone-fig" aria-hidden="true">
+            <svg width="116" height="82" viewBox="0 0 120 86" fill="none">
+              <rect x="1.5" y="1.5" width="117" height="83" rx="11" fill="#FBF3F1" stroke="#C58575" stroke-width="2.5"/>
+              <circle cx="60" cy="33" r="13" fill="#E5CCC5"/>
+              <path d="M39 76c0-12 9-21 21-21s21 9 21 21z" fill="#E5CCC5"/>
+              <circle cx="99" cy="20" r="8" fill="#EFDCD6"/>
+            </svg>
+          </div>
+          <div class="dd-h">
+            <span class="ic ic-n" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></span>
+            <h3>Ovako nemojte</h3>
+          </div>
+          <ul>
+            <li><span class="ic ic-n" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></span> Ne snimajte telefonom <strong>položenim vodoravno</strong></li>
+            <li><span class="ic ic-n" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></span> Ne stajte <strong>leđima prema prozoru</strong> &mdash; bićete tamna silueta</li>
+            <li><span class="ic ic-n" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></span> Ne <strong>čitajte s papira</strong> &mdash; odmah se vidi i ne možemo to objaviti</li>
+            <li><span class="ic ic-n" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></span> Ne držite telefon <strong>u ruci dok hodate</strong></li>
+            <li><span class="ic ic-n" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></span> Ne dodajte <strong>muziku, filtere ni natpise</strong></li>
+            <li><span class="ic ic-n" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></span> Nemojte navoditi <strong>imena lijekova ni dijagnoze</strong> drugih osoba</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:22px">
+        <h3 style="margin-bottom:18px">Prije nego pošaljete, provjerite</h3>
+        <ul class="check">
+          <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Pustite snimak od početka i <strong>poslušajte se</strong> &mdash; čuje li se svaka riječ?</li>
+          <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Jeste li <strong>odgovorili na svih pet pitanja</strong>, uključujući ono što nije upalilo?</li>
+          <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Traje li snimak <strong>bar jedan minut</strong>?</li>
+          <li><span class="ic ic-y" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Ima li u kadru nečega što <strong>ne biste željeli da se vidi</strong>?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW TO SEND ============ -->
+  <section id="slanje">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Slanje</p>
+        <h2>Pošaljite kako vam je <em>najlakše</em>.</h2>
+        <p>Sva tri načina vrijede isto. Ako se snimak ne šalje jer je prevelik, pošaljite ga preko Vibera &mdash; tamo se automatski smanji.</p>
+      </div>
+
+      <div class="send">
+        <a class="send-opt" href="#forma">
+          <span class="send-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 9l5-5 5 5M12 4v12"/></svg></span>
+          <span><b>Preko forme na ovoj stranici</b><em>Najsigurnije &mdash; odmah upisujete i adresu za dostavu</em></span>
+        </a>
+        <a class="send-opt" href="#forma">
+          <span class="send-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16.5v2.6c0 1-.9 1.8-1.9 1.7C9.3 20.2 3.8 14.7 3.2 4.9 3.1 3.9 3.9 3 4.9 3h2.6c.9 0 1.6.6 1.7 1.5.1 1 .4 2 .7 2.9.2.6 0 1.3-.5 1.7l-1 1a13.6 13.6 0 006.5 6.5l1-1c.4-.5 1.1-.7 1.7-.5.9.3 1.9.6 2.9.7.9.1 1.5.8 1.5 1.7z"/></svg></span>
+          <span><b>Viber &mdash; 06x xxx xxx</b><em>Snimite, pa proslijedite kao poruku. Napišite i svoje ime.</em></span>
+        </a>
+        <a class="send-opt" href="#forma">
+          <span class="send-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H7l-3 3z"/></svg></span>
+          <span><b>WhatsApp &mdash; 06x xxx xxx</b><em>Isto kao Viber, ako vam je taj program bliži</em></span>
+        </a>
+      </div>
+      <p style="margin-top:20px;font-size:16px;color:var(--ink-soft);text-align:center;max-width:640px;margin-left:auto;margin-right:auto">Ako vam treba pomoć oko snimanja ili slanja, nazovite <strong>0800 xx xxx</strong> radnim danima od 8 do 16. Provešćemo vas kroz postupak.</p>
+    </div>
+  </section>
+
+  <!-- ============ FORM ============ -->
+  <section class="sec-cream" id="forma">
+    <div class="wrap narrow">
+      <div class="sec-head">
+        <p class="eyebrow">Forma</p>
+        <h2>Pošaljite <em>svoj video</em>.</h2>
+      </div>
+
+      <form class="form-card" onsubmit="return false">
+        <div class="field">
+          <label for="f1">Ime i prezime</label>
+          <input id="f1" type="text" placeholder="npr. Mirjana Kovačević">
+        </div>
+        <div class="field">
+          <label for="f2">Grad</label>
+          <input id="f2" type="text" placeholder="npr. Tuzla">
+        </div>
+        <div class="field">
+          <label for="f3">Broj telefona <span class="hint">&mdash; zovemo samo radi potvrde dostave</span></label>
+          <input id="f3" type="tel" placeholder="06x xxx xxx">
+        </div>
+        <div class="field">
+          <label for="f4">E-mail <span class="hint">&mdash; nije obavezno</span></label>
+          <input id="f4" type="email" placeholder="ime@primjer.com">
+        </div>
+        <div class="field">
+          <label for="f5">Adresa za dostavu poklona</label>
+          <textarea id="f5" rows="3" placeholder="Ulica i broj, poštanski broj, mjesto"></textarea>
+        </div>
+        <div class="field">
+          <label for="f6">Koji proizvod ste koristili i koliko dugo?</label>
+          <input id="f6" type="text" placeholder="npr. kapsule, oko 2 mjeseca">
+        </div>
+
+        <div class="field">
+          <label>Vaš video</label>
+          <div class="drop">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 9l5-5 5 5M12 4v12"/></svg>
+            <b>Dodajte snimak s telefona</b>
+            <span>MP4 ili MOV, do 500 MB. Možete poslati i više kraćih snimaka.</span>
+          </div>
+        </div>
+
+        <div class="consents">
+          <label class="cons">
+            <input type="checkbox">
+            <span>Potvrđujem da sam <strong>zaista koristio/la</strong> proizvod i da je iskustvo u snimku moje i istinito.</span>
+          </label>
+          <label class="cons">
+            <input type="checkbox">
+            <span>Dozvoljavam da se snimak objavi na web stranici, društvenim mrežama i u plaćenim oglasima Srijemuš La Vita, uz <strong>jasnu oznaku da sam za snimak dobio/la poklon paket</strong>.</span>
+          </label>
+          <label class="cons">
+            <input type="checkbox">
+            <span>Želim da se objavi <strong>samo moje ime i grad</strong>, bez prezimena.<span class="opt">Nije obavezno</span></span>
+          </label>
+          <label class="cons">
+            <input type="checkbox">
+            <span>Imam <strong>18 ili više godina</strong> i saglasan/na sam s <a href="#pravila" style="color:var(--gold)">pravilima i politikom privatnosti</a>.</span>
+          </label>
+        </div>
+
+        <button class="btn btn-gold btn-block" style="margin-top:24px" type="submit">Pošaljite video i naručite poklon</button>
+        <p class="form-foot">Saglasnost možete povući u bilo kom trenutku pisanjem na <strong>info@srijemus.com</strong> &mdash; snimak tada uklanjamo sa svojih kanala, a poklon zadržavate.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ WHAT HAPPENS NEXT ============ -->
+  <section>
+    <div class="wrap narrow">
+      <div class="sec-head">
+        <p class="eyebrow">Nakon slanja</p>
+        <h2>Šta se dešava s <em>vašim snimkom</em>.</h2>
+      </div>
+
+      <div class="tl">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-when">Odmah</span>
+            <b>Potvrda da je snimak stigao</b>
+            <p>Dobijate SMS ili e-mail. Ako ništa ne stigne u roku od sat vremena, snimak nije prošao &mdash; pozovite nas.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-when">Za 2 do 3 radna dana</span>
+            <b>Pregledamo snimak</b>
+            <p>Provjeravamo samo je li kompletan i čujan i jesu li ispunjeni uslovi &mdash; ne ocjenjujemo šta ste rekli. Ako nešto nedostaje, javimo vam i možete dosnimiti.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-when">Za 5 do 7 dana</span>
+            <b>Poklon paket stiže na adresu</b>
+            <p>Šaljemo ga bez obzira na to hoćemo li snimak objaviti i bez obzira na to šta ste u njemu rekli.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div>
+            <span class="tl-when">Kasnije, ako uopšte</span>
+            <b>Moguća objava</b>
+            <p>Dio snimaka koristimo na stranici, društvenim mrežama i u oglasima, uvijek uz oznaku da je snimak nagrađen poklonom. Ne dodajemo riječi koje niste rekli i ne montiramo tako da se smisao promijeni.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec-cream">
+    <div class="wrap faq-grid">
+      <div class="sec-head">
+        <p class="eyebrow">Pitanja i odgovori</p>
+        <h2>Ono što nas <em>najčešće pitate</em>.</h2>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>Stvarno dobijam poklon i ako kažem nešto loše?</summary>
+          <p>Da. Uslov je da je snimak kompletan i čujan, a ne da je pohvalan. Snimak u kojem kažete da kod vas nije bilo promjene dobija isti paket kao i najbolja preporuka. Takav snimak nam je koristan jer pokazuje gdje su granice proizvoda.</p>
+        </details>
+        <details>
+          <summary>Ne snalazim se s telefonom. Može li mi neko pomoći?</summary>
+          <p>Može. Nazovite 0800 xx xxx i provešćemo vas korak po korak. Snimak može snimiti i neko od ukućana, važno je samo da vi govorite.</p>
+        </details>
+        <details>
+          <summary>Hoće li moj snimak vidjeti cijeli internet?</summary>
+          <p>Ne nužno. Objavljujemo samo dio snimaka. U formi birate i da li se objavljuje puno ime ili samo ime i grad. Saglasnost možete povući kad god poželite i snimak skidamo sa svojih kanala.</p>
+        </details>
+        <details>
+          <summary>Moram li pokazati lice?</summary>
+          <p>Za poklon paket da &mdash; snimci bez lica ne mogu se koristiti. Ako to ne želite, i dalje nam možete poslati pisano iskustvo ili nam ga ispričati telefonom, ali u tom slučaju nema poklona.</p>
+        </details>
+        <details>
+          <summary>Koliko snimaka mogu poslati?</summary>
+          <p>Jedan poklon paket po osobi i po adresi. Ako kasnije poželite dopuniti iskustvo, rado ćemo primiti novi snimak, ali novog paketa nema.</p>
+        </details>
+        <details>
+          <summary>Šta ako sam proizvod kupio/la u apoteci, a ne kod vas?</summary>
+          <p>Nema razlike. Važno je samo da ste ga koristili najmanje tri sedmice.</p>
+        </details>
+        <details>
+          <summary>Smijem li spominjati svoju dijagnozu ili lijekove?</summary>
+          <p>Možete govoriti o svom ličnom iskustvu, ali vas molimo da ne navodite imena lijekova i da ne govorite o zdravlju drugih ljudi. Srijemuš La Vita je dodatak ishrani, a ne lijek, pa snimke u kojima se tvrdi da nešto liječi ne možemo objaviti &mdash; poklon ipak dobijate.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="band">
+    <div class="wrap">
+      <h2>Petnaest minuta <em>vašeg vremena</em>.</h2>
+      <p>Toliko treba da nekome ko se dvoumi kažete ono što biste rekli i komšiji preko ograde.</p>
+      <a href="#forma" class="btn btn-gold">Snimite i pošaljite video</a>
+    </div>
+  </section>
+
+  <!-- ============ RULES ============ -->
+  <section id="pravila">
+    <div class="wrap narrow fine">
+      <div class="sec-head">
+        <p class="eyebrow">Sitna slova, krupno napisana</p>
+        <h2>Pravila učešća.</h2>
+      </div>
+
+      <h3>Ko može učestvovati</h3>
+      <ul>
+        <li>Osobe starije od 18 godina s prebivalištem u BiH, Hrvatskoj, Srbiji ili Crnoj Gori.</li>
+        <li>Koje su neki od proizvoda Srijemuš La Vita koristile najmanje tri sedmice, bez obzira gdje su ga kupile.</li>
+        <li>Zaposleni u kompaniji i članovi njihovih domaćinstava ne mogu učestvovati.</li>
+      </ul>
+
+      <h3>Poklon</h3>
+      <ul>
+        <li>Jedan poklon paket po osobi i po adresi dostave, dok traje akcija.</li>
+        <li>Paket se šalje u roku od 7 radnih dana od potvrde da snimak ispunjava uslove.</li>
+        <li>Poklon se ne može zamijeniti za novac i ne uslovljava se kupovinom.</li>
+        <li><strong>Sadržaj vašeg mišljenja ni na koji način ne utiče na dobijanje poklona.</strong> Ocjenjuje se isključivo tehnička kompletnost snimka.</li>
+      </ul>
+
+      <h3>Korištenje snimka</h3>
+      <ul>
+        <li>Slanjem snimka dajete neisključivo pravo korištenja na web stranici, društvenim mrežama i u plaćenim oglasima Srijemuš La Vita.</li>
+        <li>Svaka objava nosi vidljivu oznaku da je snimak nagrađen poklon paketom.</li>
+        <li>Snimke skraćujemo, ali ne montiramo tako da se mijenja smisao rečenog i ne dodajemo riječi koje niste izgovorili.</li>
+        <li>Saglasnost povlačite u svakom trenutku na info@srijemus.com; snimak uklanjamo s kanala pod našom kontrolom u roku od 30 dana.</li>
+        <li>Podaci se čuvaju samo radi dostave poklona i evidencije saglasnosti i ne prosljeđuju se trećim licima osim dostavnoj službi.</li>
+      </ul>
+
+      <div class="disclaimer">
+        <strong>Važno.</strong> Srijemuš La Vita je dodatak ishrani, a ne lijek, i ne služi za liječenje, ublažavanje ni sprečavanje bolesti. Iskustva korisnika su lična, razlikuju se od osobe do osobe i ne predstavljaju medicinski savjet niti obećanje rezultata. Snimci prikupljeni putem ove stranice nastali su uz poklon paket kao naknadu. Ako imate zdravstvenih tegoba ili uzimate terapiju, posavjetujte se s ljekarom ili farmaceutom.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Srijemuš La Vita &nbsp;&middot;&nbsp; Vaš izvor čiste krvi</p>
+    <p style="margin-top:8px">Prijedlog stranice izradio <a href="https://adsmerce.com">AdsMerce</a> &nbsp;&middot;&nbsp; sadržaj je primjer i nije objavljen</p>
+  </div>
+</footer>
+
+</body>
+</html>

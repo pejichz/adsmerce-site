@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /mockups/
 
 # Plain-text summary of the site for AI crawlers and assistants:
 # https://adsmerce.com/llms.txt
