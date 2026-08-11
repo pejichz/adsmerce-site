@@ -46,6 +46,7 @@
       "work.title": "Creative is the new <em>targeting</em>.",
       "work.sub": "We create video and static ads that grab attention, present the offer clearly, and give the algorithm more quality opportunities to find buyers.",
       "work.note": "A selection of recently created ads. Full portfolio available on request.",
+      "work.ugc": "Shoot UGC video? Apply as a creator →",
       "work.f1": "UGC video ad",
       "work.f2": "Product demo",
       "work.f3": "AI-generated video",
@@ -143,7 +144,6 @@
       "faq.a6": "No. We focus exclusively on e-commerce. That specialization lets us spot problems faster, make better decisions and apply experience from similar situations and markets.",
 
       "nav.blog": "Blog",
-      "work.ugc": "Are you a content creator? Apply for paid UGC collaborations →",
 
       "why.4t": "You always know what we do and why",
       "why.4d": "You get a clear view of results, completed tests and the next priorities. No hiding behind complicated reports and vague explanations.",
@@ -290,6 +290,7 @@
       "work.title": "Kreativa je novi <em>targeting</em>.",
       "work.sub": "Kreiramo video i statične oglase koji privlače pažnju, jasno predstavljaju ponudu i daju algoritmu više kvalitetnih prilika za pronalazak kupaca.",
       "work.note": "Izbor nedavno kreiranih oglasa. Kompletan portfolio dostupan je na upit.",
+      "work.ugc": "Snimaš UGC video? Prijavi se kao kreator →",
       "work.f1": "UGC video oglas",
       "work.f2": "Product demo",
       "work.f3": "AI-generisani video",
@@ -387,7 +388,6 @@
       "faq.a6": "Ne. Fokusirani smo isključivo na e-commerce. Ta specijalizacija nam omogućava da brže prepoznamo probleme, donosimo kvalitetnije odluke i primjenjujemo iskustvo iz sličnih situacija i tržišta.",
 
       "nav.blog": "Blog",
-      "work.ugc": "Ti si kreator sadržaja? Prijavi se za plaćene UGC saradnje →",
 
       "why.4t": "Uvijek znaš šta radimo i zašto",
       "why.4d": "Dobijaš jasan pregled rezultata, završenih testova i sljedećih prioriteta. Bez skrivanja iza komplikovanih izvještaja i nejasnih objašnjenja.",
