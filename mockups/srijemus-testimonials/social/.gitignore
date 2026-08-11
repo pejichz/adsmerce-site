@@ -1,0 +1,2 @@
+# 1.5 MB of base64 webfonts — regenerate with: node fetch-fonts.mjs
+fonts.css
