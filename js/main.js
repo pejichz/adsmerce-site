@@ -213,7 +213,7 @@
 
       "sk.skip": "Skip to content",
 
-      "cc.text": "We’d like to use cookies (analytics and Meta Pixel) to understand what works and measure our ads. Your call.",
+      "cc.text": "We’d like to use cookies (Google Analytics, Microsoft Clarity and Meta Pixel) to understand what works and measure our ads. Your call.",
       "cc.accept": "Accept",
       "cc.decline": "Decline",
       "cc.more": "Privacy policy",
@@ -224,13 +224,13 @@
 
       "pv.kicker": "Legal",
       "pv.title": "Privacy <em>policy</em>.",
-      "pv.updated": "Last updated: July 6, 2026",
+      "pv.updated": "Last updated: October 2, 2026",
       "pv.1t": "Who we are",
       "pv.1d": "AdsMerce is a performance marketing agency for e-commerce brands. For anything related to your data, write to hello@adsmerce.com.",
       "pv.2t": "What we collect",
-      "pv.2d": "Emails you send us and newsletter sign-ups (your email address). Anonymous analytics data (Google Analytics), and advertising data via Meta Pixel once it is switched on — these load on every visit unless you opt out below. To auto-detect your language, your IP country is looked up once via ipapi.co. We don’t store your IP.",
+      "pv.2d": "Emails you send us and newsletter sign-ups (your email address). Analytics data (Google Analytics), interaction data, heatmaps and session recordings (Microsoft Clarity), and advertising data via Meta Pixel once it is switched on — these load on every visit unless you opt out below. To auto-detect your language, your IP country is looked up once via ipapi.co. We don’t store your IP.",
       "pv.3t": "Why we collect it",
-      "pv.3d": "To reply to you, send the newsletter you asked for, understand how the site is used and measure our own advertising. We never sell or share your data.",
+      "pv.3d": "To reply to you, send the newsletter you asked for, understand how the site is used and measure our own advertising. We do not sell your data.",
       "pv.4t": "Cookies & analytics",
       "pv.4d": "Analytics starts as soon as you open the site, so we can see how it is used. If you would rather not be counted, opt out here — the choice is kept in your browser and applies to this and future visits:",
       "pv.4btn": "Opt out of analytics",
@@ -238,7 +238,7 @@
       "pv.5t": "Your rights",
       "pv.5d": "Under GDPR you can request access, correction or deletion of your data at any time: one email to hello@adsmerce.com is enough.",
       "pv.6t": "Third-party services",
-      "pv.6d": "Google Analytics (traffic measurement), Meta Pixel (ad measurement and retargeting), ipapi.co (language auto-detection), Google Fonts (typography), Wistia (video hosting, loads only when you click play on a video), Tally (creator application form) and our newsletter provider once configured.",
+      "pv.6d": "Google Analytics (traffic measurement), Microsoft Clarity (interaction analysis, heatmaps and session recordings), Meta Pixel (ad measurement and retargeting), ipapi.co (language auto-detection), Google Fonts (typography), Wistia (video hosting, loads only when you click play on a video), Tally (creator application form) and our newsletter provider once configured.",
 
       "ft.privacy": "Privacy policy",
       "ft.cookie": "Cookie policy",
@@ -457,7 +457,7 @@
 
       "sk.skip": "Preskoči na sadržaj",
 
-      "cc.text": "Željeli bismo koristiti kolačiće (analitika i Meta Pixel) da razumijemo šta radi i mjerimo vlastite oglase. Ti odlučuješ.",
+      "cc.text": "Željeli bismo koristiti kolačiće (Google Analytics, Microsoft Clarity i Meta Pixel) da razumijemo šta radi i mjerimo vlastite oglase. Ti odlučuješ.",
       "cc.accept": "Prihvati",
       "cc.decline": "Odbij",
       "cc.more": "Politika privatnosti",
@@ -468,13 +468,13 @@
 
       "pv.kicker": "Pravno",
       "pv.title": "Politika <em>privatnosti</em>.",
-      "pv.updated": "Zadnja izmjena: 6. juli 2026.",
+      "pv.updated": "Zadnja izmjena: 2. oktobar 2026.",
       "pv.1t": "Ko smo mi",
       "pv.1d": "AdsMerce je performance marketing agencija za e-commerce brendove. Za sve u vezi tvojih podataka piši na hello@adsmerce.com.",
       "pv.2t": "Šta prikupljamo",
-      "pv.2d": "Emailove koje nam pošalješ i prijave na newsletter (tvoja email adresa). Anonimne analitičke podatke (Google Analytics), a kad Meta Pixel bude uključen i podatke za oglašavanje — to se učitava pri svakoj posjeti, osim ako se ispod ne isključiš. Za automatsko prepoznavanje jezika, država tvoje IP adrese se jednom provjerava preko ipapi.co. Tvoju IP adresu ne čuvamo.",
+      "pv.2d": "Emailove koje nam pošalješ i prijave na newsletter (tvoja email adresa). Analitičke podatke (Google Analytics), podatke o interakcijama, toplotne mape i snimke sesija (Microsoft Clarity), a kad Meta Pixel bude uključen i podatke za oglašavanje — to se učitava pri svakoj posjeti, osim ako se ispod ne isključiš. Za automatsko prepoznavanje jezika, država tvoje IP adrese se jednom provjerava preko ipapi.co. Tvoju IP adresu ne čuvamo.",
       "pv.3t": "Zašto prikupljamo",
-      "pv.3d": "Da ti odgovorimo, pošaljemo newsletter koji si tražio/la, razumijemo kako se sajt koristi i mjerimo vlastito oglašavanje. Tvoje podatke nikad ne prodajemo niti dijelimo.",
+      "pv.3d": "Da ti odgovorimo, pošaljemo newsletter koji si tražio/la, razumijemo kako se sajt koristi i mjerimo vlastito oglašavanje. Tvoje podatke ne prodajemo.",
       "pv.4t": "Kolačići i analitika",
       "pv.4d": "Analitika se pokreće odmah kad otvoriš sajt, kako bismo vidjeli kako se koristi. Ako ne želiš da te brojimo, isključi je ovdje — izbor se čuva u tvom pregledniku i važi za ovu i buduće posjete:",
       "pv.4btn": "Isključi analitiku",
@@ -482,7 +482,7 @@
       "pv.5t": "Tvoja prava",
       "pv.5d": "Po GDPR-u u svakom trenutku možeš zatražiti uvid, ispravku ili brisanje svojih podataka: dovoljan je jedan email na hello@adsmerce.com.",
       "pv.6t": "Servisi trećih strana",
-      "pv.6d": "Google Analytics (mjerenje posjeta), Meta Pixel (mjerenje oglasa i retargeting), ipapi.co (automatsko prepoznavanje jezika), Google Fonts (tipografija), Wistia (hosting videa, učitava se tek kad klikneš play na video), Tally (forma za prijavu kreatora) i newsletter servis kad bude podešen.",
+      "pv.6d": "Google Analytics (mjerenje posjeta), Microsoft Clarity (analiza interakcija, toplotne mape i snimci sesija), Meta Pixel (mjerenje oglasa i retargeting), ipapi.co (automatsko prepoznavanje jezika), Google Fonts (tipografija), Wistia (hosting videa, učitava se tek kad klikneš play na video), Tally (forma za prijavu kreatora) i newsletter servis kad bude podešen.",
 
       "ft.privacy": "Politika privatnosti",
       "ft.cookie": "Politika kolačića",
@@ -701,10 +701,10 @@
     document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* --------------------------------------------------- analytics & pixel */
-  /* Paste your IDs here when ready. While both are empty, no tracking code
-     loads at all. */
+  /* ------------------------------------------------------------ analytics */
+  /* Tracking runs only on production and respects the visitor opt-out. */
   var GA4_ID = "G-6XRG7P94DM";
+  var CLARITY_ID = "yricbjr81n";
   var META_PIXEL_ID = ""; /* e.g. "123456789012345" */
 
   /* Tracking loads on page load without asking first. Flip this to true to
@@ -720,6 +720,7 @@
   var TRACKING_HOSTS = ["adsmerce.com", "www.adsmerce.com"];
   if (TRACKING_HOSTS.indexOf(location.hostname) === -1) {
     GA4_ID = "";
+    CLARITY_ID = "";
     META_PIXEL_ID = "";
   }
 
@@ -742,6 +743,13 @@
       window.gtag = function () { window.dataLayer.push(arguments); };
       window.gtag("js", new Date());
       window.gtag("config", GA4_ID, { anonymize_ip: true });
+    }
+    if (CLARITY_ID) {
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", CLARITY_ID);
     }
     if (META_PIXEL_ID) {
       !function (f, b, e, v, n, t, s) {
@@ -808,7 +816,7 @@
     });
   }
 
-  if (GA4_ID || META_PIXEL_ID) {
+  if (GA4_ID || CLARITY_ID || META_PIXEL_ID) {
     var consent = null;
     try { consent = localStorage.getItem(CONSENT_KEY); } catch (e) { }
     if (!REQUIRE_CONSENT) {
